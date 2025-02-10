@@ -20,7 +20,7 @@ const LandingPage = () => {
     <Stats/>
     <Events/>
     <TestimonialsPage/>
-    <ContactUs/>
+
     </>
   )
 }
