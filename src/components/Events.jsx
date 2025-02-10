@@ -49,7 +49,7 @@ const CardAnimations = () => {
             onTransitionEnd={handleCard1TransitionEnd}  // Handle transition end for Card 1
           >
             <img
-              src="https://via.placeholder.com/200x200"
+              src={images.proshow}
               alt="Card 1"
               className="w-full h-auto"
             />
@@ -66,7 +66,7 @@ const CardAnimations = () => {
             }`}
           >
             <img
-              src={images.proshow}
+              src={images.coverimg}
               alt="Card 2"
               className="w-full h-auto"
             />
@@ -83,7 +83,7 @@ const CardAnimations = () => {
             }`}
           >
             <img
-              src="https://via.placeholder.com/200x200"
+              src={images.coverimg}
               alt="Card 3"
               className="w-full h-auto"
             />

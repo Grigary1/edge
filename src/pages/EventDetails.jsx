@@ -12,9 +12,9 @@ const EventDetails = () => {
             title: "Meme Contest",
             description: "Join our exciting Meme Contest and showcase your creativity! Win amazing prizes and have fun.",
             venue: "Online Event",
-            date: "November 15, 2023",
-            fee: "Free",
-            prize_pool: "$500",
+            date: "idk",
+            fee: "20",
+            prize_pool: "500",
             link: 'https://forms.gle/QQQaf4umbnEWjd5Y8'
         },
     ];
