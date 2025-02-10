@@ -29,8 +29,8 @@ const ContactUs = () => {
               <div className="bg-[#e91687] text-white p-4 rounded-full text-2xl">✉️</div>
             </div>
             <h3 className="font-semibold text-lg">Email:</h3>
-            <p className="text-blue-600">hello@company.com</p>
-            <p className="text-blue-600">support@company.com</p>
+            <p className="text-blue-600">acm@gmail.com</p>
+            
           </div>
           
           {/* Phone */}
