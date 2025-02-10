@@ -25,19 +25,19 @@ h1,h2,h3,h4,h5,h6,p{
     --text-size-3xl: 3.16rem;
     --text-size-4xl: 4.21rem;
     --text-size-5xl: 5.61rem;
-    --background-color: hsl(0, 0%, 4%); /* Background color for the entire website, including individual sections */
-    --background-image: url('src/styles/concert-3387324_960_720.jpg'); /* Replace with your image path */
-    --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
-    --primary-color: #e91687; /* Color for headings, subheadings and title throughout the website */
-    --secondary-color: #31124e; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-    --accent-color: #fed104; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --background-color: hsl(0, 0%, 4%);
+    --background-image: url('src/styles/concert-3387324_960_720.jpg');
+    --default-color: #ffffff;
+    --primary-color: #e91687; 
+    --secondary-color: #31124e;
+    --accent-color: #fed104;
     --navbar-height: 80px;
 }
 
   
 
 
-/* Navbar Styles */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -49,24 +49,24 @@ h1,h2,h3,h4,h5,h6,p{
   width: 100%;
   height: 80px;
   padding: 0 8rem !important;
-  background: hsl(332, 100%, 50%); /* Transparent background */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  z-index: 1000; /* Ensure navbar is above other elements */
+  background: hsl(332, 100%, 50%); 
+  backdrop-filter: blur(10px); 
+  z-index: 1000; 
   padding: 0 20px;
   border-bottom: 1px solid #969696b7;
-  transform: translateY(0); /* Default position */
-  transition: transform 0.3s ease-in-out; /* Smooth hide/show */
+  transform: translateY(0); 
+  transition: transform 0.3s ease-in-out; 
 }
 .navbar.hidden {
-  transform: translateY(-100%); /* Move navbar out of view */
+  transform: translateY(-100%);
   position: sticky;
 }
 
 .navbar.visible {
   transform: translateY(0);
-  position: sticky;  /* Move navbar into view */
+  position: sticky;  
 }
-/* Logo Section */
+
 .logo{
   position: relative;
 }
@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6,p{
   height: 40px;
 }
 
-/* Nav Links */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ h1,h2,h3,h4,h5,h6,p{
 .nav-links button:hover{
   border-bottom:2px solid  var(--accent-color);
 }
-/* Button */
+
 .nav-button .btn {
   background:none;
   border: 2px solid var(--default-color);
@@ -130,7 +130,7 @@ h1,h2,h3,h4,h5,h6,p{
   color:hsl(332, 100%, 50%)
 }
 
-/* Hamburger Button */
+
 .hamburger {
   display: none;
   font-size: 24px;
@@ -140,7 +140,6 @@ h1,h2,h3,h4,h5,h6,p{
   cursor: pointer;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
@@ -206,7 +205,7 @@ h1,h2,h3,h4,h5,h6,p{
   }
 }
 
-/* Hero Section Styles */
+
 
 
 
@@ -214,7 +213,7 @@ h1,h2,h3,h4,h5,h6,p{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - var(--navbar-height)); /* Subtract navbar height */
+    height: calc(100vh - var(--navbar-height));
     color: white;
     text-align: center;
     padding: 20px;
@@ -225,7 +224,7 @@ h1,h2,h3,h4,h5,h6,p{
   .background-video-container {
     position: relative;
     width: auto;
-    height: calc(100vh - var(--navbar-height)); /* Subtract navbar height */
+    height: calc(100vh - var(--navbar-height));
     overflow: hidden;
   }
   
@@ -236,48 +235,45 @@ h1,h2,h3,h4,h5,h6,p{
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 100%;
-    max-height: 100vh; /* Subtract navbar height */
+    max-height: 100vh; 
     width: auto;
     height: auto;
     z-index: -1;
-    filter: brightness(0.5); /* Optional: Adjust the brightness for readability */
+    filter: brightness(0.5); 
   }
-
   .hero-content {
-    max-width: 800px; /* Restricts content width for better layout */
+    max-width: 800px; 
     padding: 20px;
     z-index: 3;
     font-family: 'Inter', sans-serif;
   }
   .hero-logo-container{
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 700px; /* Adjust as needed */
-    width: auto; /* Adjust as needed */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: auto;
   }
   .hero-logo-container{
     height: fit-content;
   }
   .hero-logo {
-    max-width: 100%; /* Ensures the image scales appropriately */
-    max-height: 100%; /* Ensures the image scales appropriately */
+    max-width: 100%;
+    max-height: 100%;
   }
   
   .hero-heading {
-    font-size: var(--text-size-2xl); /* Adjust heading size */
+    font-size: var(--text-size-2xl);
     font-weight: bold;
     margin-bottom: 15px;
   }
   
   .hero-subtext {
-    font-size: 1.2rem; /* Adjust subtext size */
+    font-size: 1.2rem;
     line-height: 1.5;
   }
 
-/*--------------------------------------------------------------
-  # About Section
-  --------------------------------------------------------------*/
+
   .about{
 background-color: var(--background-color);
     padding: 4em 20px;
@@ -316,9 +312,7 @@ background-color: var(--background-color);
     top: calc(50% - 47px);
   }
   
-  /*--------------------------------------------------------------
-  # Why Us Section
-  --------------------------------------------------------------*/
+
   .why-us {
     background-color: var(--background-color);
     

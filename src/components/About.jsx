@@ -4,27 +4,25 @@ import aboutimg2 from "../assets/stock-hero2.jpg";
 import aboutimg3 from "../assets/stock-hero3.jpg";
 
 const About = () => {
-  const images = [aboutimg, aboutimg2, aboutimg3]; // Array of images
+  const images = [aboutimg, aboutimg2, aboutimg3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Automatically change the image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
+    return () => clearInterval(interval); 
   }, [images.length]);
 
   return (
     <div>
-      {/* About Section */}
+
       <section
         id="about"
         className="about py-12 sm:py-16 bg-[hsl(0,0%,4%)] text-white"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Stacked Images Section */}
             <div
               className="relative h-64 sm:h-80 lg:h-96 w-full"
               data-aos="fade-up"
@@ -41,7 +39,6 @@ const About = () => {
                 />
               ))}
             </div>
-            {/* About Content Section */}
             <div
               className="content text-center lg:text-left"
               data-aos="fade-up"
@@ -81,21 +78,17 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Us Section */}
       <section
         id="why-us"
         className="py-12 sm:py-16 bg-[hsl(0,0%,4%)] text-white"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Title */}
           <div className="section-title text-center mb-8 sm:mb-12" data-aos="fade-up">
             <h2 className="text-xl sm:text-5xl font-bold text-[var(--primary-color)]">
               Why EDGE+ 4.0
             </h2>
           </div>
-          {/* Why Us Items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Card Item */}
             <div
               className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"
@@ -115,7 +108,6 @@ const About = () => {
                 expertise.
               </p>
             </div>
-            {/* Card Item */}
             <div
               className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"
@@ -135,7 +127,6 @@ const About = () => {
                 recognition and prizes.
               </p>
             </div>
-            {/* Card Item */}
             <div
               className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"

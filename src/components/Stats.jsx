@@ -1,7 +1,6 @@
 import { div } from "framer-motion/client";
 import React, { useState, useEffect, useRef } from "react";
 
-// Helper function to handle counting animation
 const useCountUp = (start, end, duration) => {
   const [count, setCount] = useState(start);
   const stepTime = Math.abs(Math.floor(duration / (end - start)));

@@ -29,7 +29,7 @@ const EventDetails = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-6">
             <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden relative">
-                {/* Text Content */}
+
                 <div className="flex-1 p-8 text-center md:text-left z-10">
                     <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-4 mx-auto md:mx-0"></div>
                     <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
@@ -55,11 +55,11 @@ const EventDetails = () => {
                     </button>
                 </div>
 
-                {/* Image Section */}
+
                 <div className="relative flex-1">
                     <div className="absolute top-4 right-4 bottom-4 left-4 border-8 border-yellow-500 -z-10"></div>
                     <img
-                        src={images.background} // Replace with your actual image URL
+                        src={images.background} 
                         alt="Concert"
                         className="w-full h-full object-cover shadow-2xl"
                         style={{

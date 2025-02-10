@@ -10,7 +10,6 @@ const CardAnimations = () => {
   const [splitDelayTransition, setSplitDelayTransition] = useState(false);
   const [splitDelayTransition1, setSplitDelayTransition1] = useState(false);
 
-  // Trigger splitDelayTransition when scroll reaches 1700px
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 1700) {
@@ -20,13 +19,13 @@ const CardAnimations = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // Empty dependency array to ensure it runs once
 
-  // Set splitDelayTransition1 after Card 1 transition completes
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); 
+
+
   const handleCard1TransitionEnd = () => {
-    // After Card 1 transition is complete, trigger Card 2
+
     setSplitDelayTransition1(true);
   };
 
@@ -40,13 +39,13 @@ const CardAnimations = () => {
           }`}
           onClick={() => {}}
         >
-          {/* Card 1 */}
+
           <li
           onClick={()=>{navigate('/workshops')}}
             className={`absolute top-0 left-[50px] w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[-2deg] ${
               splitDelayTransition ? "translate-x-[-220px]" : ""
             }`}
-            onTransitionEnd={handleCard1TransitionEnd}  // Handle transition end for Card 1
+            onTransitionEnd={handleCard1TransitionEnd} 
           >
             <img
               src={images.proshow}
@@ -59,7 +58,7 @@ const CardAnimations = () => {
             </div>
           </li>
 
-          {/* Card 2 */}
+
           <li
             className={`absolute top-0 left-[230px] w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${
               splitDelayTransition && splitDelayTransition1 ? "translate-x-[220px]" : ""
@@ -76,7 +75,6 @@ const CardAnimations = () => {
             </div>
           </li>
 
-          {/* Card 3 */}
           <li
             className={`absolute top-0 left-[140px] w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-400 ease-in-out z-8 transform rotate-[5deg] ${
               splitDelayTransition1 ? "translate-x-[0px]" : ""

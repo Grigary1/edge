@@ -34,11 +34,11 @@ const Navbar = () => {
 
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
 
-                setIsVisible(false); // Hide navbar on scroll down
+                setIsVisible(false); 
 
             } else {
 
-                setIsVisible(true); // Show navbar on scroll up
+                setIsVisible(true);
 
             }
 

@@ -40,14 +40,13 @@ const TestimonialsPage = () => {
   return (
     <div className="testm">
       <div className="pt-14 container mx-auto p-1 sm:p-4 bg-[hsl(0,0%,4%)] text-white min-h-[10vh] sm:min-h-[40vh] md:h-screen lg:h-fit flex flex-col items-center justify-center overflow-hidden">
-        {/* Heading */}
+
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-500 mb-8 text-center">
           What do seniors say about EDGE+?
         </h1>
 
-        {/* Testimonial Content */}
         <div className="flex flex-col lg:flex-row items-center justify-center mb-8 animate-scroll w-full lg:w-2/3">
-          {/* Text Section */}
+
           <div className="flex-1 text-center lg:text-left">
             <p className="text-sm sm:text-base md:text-lg text-yellow-500">{currentTestimonial.text}</p>
             <p className="text-xs sm:text-sm md:text-base font-semibold mt-2 text-pink-500">
@@ -55,7 +54,6 @@ const TestimonialsPage = () => {
             </p>
           </div>
 
-          {/* Image Section */}
           <div className="mt-4 lg:mt-0 lg:ml-8">
             <img
               src={currentTestimonial.image}
@@ -65,7 +63,6 @@ const TestimonialsPage = () => {
           </div>
         </div>
 
-        {/* Custom Animation for Smooth Transition */}
         <style jsx>{`
           @keyframes scroll {
             0%, 100% {

@@ -1,26 +1,20 @@
-/* Color Variables */
 $black: #000;
 $white: #F1EDDC;
 $purple: #A82743;
 $orange: #E15E32;
 
-/* Animation */
 $cards-transition-duration: 750ms;
 $cards-translate: 10px;
 
-/* Card Variables */
-$cards-amount: 9; /* Keep it ODD, NOT EVEN */
+$cards-amount: 9;
 $card-width: 200px;
 $card-height: 2 * $card-width;
 
-/* Not needed to edit */
 $firsthalf: floor($cards-amount / 2);
 $secondhalf: ceil($cards-amount / 2);
 
-/* Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 
-/* Custom Mixins */
 @mixin transform($transformation) {
   -webkit-transform: $transformation;
   -ms-transform: $transformation;
@@ -67,8 +61,6 @@ $secondhalf: ceil($cards-amount / 2);
   backface-visibility: $visibility;
 }
 
-
-/* Card Container */
 .fan {
   height: $card-height;
   text-align: center;
@@ -96,7 +88,6 @@ $secondhalf: ceil($cards-amount / 2);
       @include transform(scale(1.25) rotate(3deg) rotateX(-3deg) translate(-10px, -5px));
     }
 
-    // Fan-out animation for cards
     @for $i from 1 through $cards-amount {
       &:nth-child(#{$i}) {
         @if $i <= $firsthalf {
@@ -110,7 +101,6 @@ $secondhalf: ceil($cards-amount / 2);
       }
     }
 
-    /* Hover Effects */
     &.before {
       @for $i from 1 through ($cards-amount - 1) {
         &.prefix_#{$i} {
@@ -135,7 +125,6 @@ $secondhalf: ceil($cards-amount / 2);
       }
     }
 
-    /* Card Content */
     .content {
       height: $card-width * 0.67;
       line-height: $card-width * 0.67;
@@ -189,10 +178,6 @@ $secondhalf: ceil($cards-amount / 2);
   }
 }
 
-/* Footer */
-
-/* Fade In Animation */
-/* Fade In Animation */
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -200,4 +185,4 @@ $secondhalf: ceil($cards-amount / 2);
     to {
       opacity: 1;
     }
-  }
+}

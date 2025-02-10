@@ -4,7 +4,7 @@ const HoverEffect = () => {
   const [hoverPosition, setHoverPosition] = useState({ top: "50%", left: "50%" });
   const containerRef = useRef(null);
 
-  // Handle hover effect
+
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -16,17 +16,16 @@ const HoverEffect = () => {
   return (
     <><span class="loader"></span>
     <div ref={containerRef} className="container" onMouseMove={handleMouseMove}>
-      {/* Attention Text */}
+
       <div className="attention"></div>
 
-      {/* Grid Triggers */}
+
       {[...Array(200)].map((_, index) => (
         <div key={index} className="trigger"></div>
       ))}
 
-      {/* Monitor */}
       <div className="monitor">
-        {/* Floating Balls */}
+
         {[...Array(10)].map((_, index) => {
           const size = (index + 1) * 50 + 20;
           return (

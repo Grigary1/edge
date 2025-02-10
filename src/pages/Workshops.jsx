@@ -26,16 +26,16 @@ const CardAnimations = () => {
       </div>
 
       <div className="min-h-screen bg-[hsl(0,0%,4%)] font-sans pt-1">
-        {/* Expand to Grid */}
+  
         <section className="max-w-6xl mx-auto my-10">
           <ul className="relative h-[700px] cursor-pointer">
-            {/* Stack 1 */}
+  
             <li
               className={`absolute top-0 left-0 transition-transform duration-1000 ease-in-out transform ${stacksTransition ? "translate-x-[0px]" : ""
                 }`}
             >
               <ul className="relative">
-                {/* Card 1 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
                     }`}
@@ -50,7 +50,7 @@ const CardAnimations = () => {
                     <p className="text-sm">Stack 1</p>
                   </div>
                 </li>
-                {/* Card 2 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
                     }`}
@@ -65,7 +65,7 @@ const CardAnimations = () => {
                     <p className="text-sm">Stack 1</p>
                   </div>
                 </li>
-                {/* Card 3 */}
+
                 <NavLink to='/workshops/3'
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
                     }`}
@@ -83,13 +83,12 @@ const CardAnimations = () => {
               </ul>
             </li>
 
-            {/* Stack 2 */}
             <li
               className={`absolute top-0 left-0 transition-transform duration-1000 ease-in-out transform ${stacksTransition ? "translate-x-[320px]" : ""
                 }`}
             >
               <ul className="relative">
-                {/* Card 1 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
                     }`}
@@ -104,7 +103,7 @@ const CardAnimations = () => {
                     <p className="text-sm">Stack 2</p>
                   </div>
                 </li>
-                {/* Card 2 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
                     }`}
@@ -119,7 +118,7 @@ const CardAnimations = () => {
                     <p className="text-sm">Stack 2</p>
                   </div>
                 </li>
-                {/* Card 3 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
                     }`}
@@ -137,13 +136,12 @@ const CardAnimations = () => {
               </ul>
             </li>
 
-            {/* Stack 3 */}
             <li
               className={`absolute top-0 left-0 transition-transform duration-1000 ease-in-out transform ${stacksTransition ? "translate-x-[640px]" : ""
                 }`}
             >
               <ul className="relative">
-                {/* Card 1 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
                     }`}
@@ -158,7 +156,7 @@ const CardAnimations = () => {
                     <p className="text-sm">Stack 3</p>
                   </div>
                 </li>
-                {/* Card 2 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
                     }`}
@@ -173,7 +171,7 @@ const CardAnimations = () => {
                     <p className="text-sm">Stack 3</p>
                   </div>
                 </li>
-                {/* Card 3 */}
+
                 <li
                   className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
                     }`}
