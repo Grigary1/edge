@@ -1,0 +1,203 @@
+/* Color Variables */
+$black: #000;
+$white: #F1EDDC;
+$purple: #A82743;
+$orange: #E15E32;
+
+/* Animation */
+$cards-transition-duration: 750ms;
+$cards-translate: 10px;
+
+/* Card Variables */
+$cards-amount: 9; /* Keep it ODD, NOT EVEN */
+$card-width: 200px;
+$card-height: 2 * $card-width;
+
+/* Not needed to edit */
+$firsthalf: floor($cards-amount / 2);
+$secondhalf: ceil($cards-amount / 2);
+
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+/* Custom Mixins */
+@mixin transform($transformation) {
+  -webkit-transform: $transformation;
+  -ms-transform: $transformation;
+  transform: $transformation;
+}
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin transform-style($style) {
+  -webkit-transform-style: $style;
+  -moz-transform-style: $style;
+  transform-style: $style;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin perspective($value) {
+  -webkit-perspective: $value;
+  perspective: $value;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin backface-visibility($visibility) {
+  -webkit-backface-visibility: $visibility;
+  backface-visibility: $visibility;
+}
+
+
+/* Card Container */
+.fan {
+  height: $card-height;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+
+  li {
+    width: $card-width;
+    height: $card-height;
+    position: absolute;
+    top: 0;
+    left: calc(50% - #{$card-width / 2});
+    cursor: pointer;
+    border-radius: 8px;
+    display: block;
+    margin: 5px;
+    opacity: 0;
+    @include perspective(1800px);
+    @include transition(all $cards-transition-duration);
+    @include transform-origin(50% 100%);
+
+    &:hover {
+      z-index: $cards-amount + 1;
+      @include transform(scale(1.25) rotate(3deg) rotateX(-3deg) translate(-10px, -5px));
+    }
+
+    // Fan-out animation for cards
+    @for $i from 1 through $cards-amount {
+      &:nth-child(#{$i}) {
+        @if $i <= $firsthalf {
+          @include transform(rotate(#{($i - $cards-amount + 4) * 8}deg));
+        } @else if $i == $secondhalf {
+          @include transform(translate(0) rotate(0deg));
+        } @else {
+          @include transform(rotate(#{($i - 5) * 8}deg));
+        }
+        @include animation(fadeIn $cards-transition-duration ($cards-transition-duration / 5) * $i ease-in-out forwards);
+      }
+    }
+
+    /* Hover Effects */
+    &.before {
+      @for $i from 1 through ($cards-amount - 1) {
+        &.prefix_#{$i} {
+          $angle: ((25 / $cards-amount) * ($i * 1.25));
+          $translate: (($i * $cards-translate) + $cards-amount);
+          @include transform(rotate(-#{$angle}deg) translate(-#{($translate * 6)}px, #{$translate}px));
+          @include box-shadow(-#{$i}px #{$i}px 5px rgba($black, .25));
+          z-index: $i;
+        }
+      }
+    }
+
+    &.after {
+      @for $i from 1 through ($cards-amount - 1) {
+        &.prefix_#{$i} {
+          $angle: ((25 / $cards-amount) * ($i * 1.25));
+          $translate: (($i * $cards-translate) + $cards-amount);
+          @include transform(rotate(#{$angle}deg) translate(#{$translate * 6}px, #{$translate}px));
+          @include box-shadow(-#{$i}px #{$i}px 5px rgba($black, .25));
+          z-index: $i - 1;
+        }
+      }
+    }
+
+    /* Card Content */
+    .content {
+      height: $card-width * 0.67;
+      line-height: $card-width * 0.67;
+      color: $white;
+      font-size: 40px;
+    }
+
+    .flip {
+      width: $card-width;
+      height: $card-height;
+      position: relative;
+      @include perspective(1800px);
+
+      .card {
+        width: $card-width;
+        height: $card-height;
+        @include transform-style(preserve-3d);
+        @include transition(all $cards-transition-duration / 2);
+
+        &.flipped {
+          @include transform(rotateX(-190deg));
+        }
+
+        .face {
+          width: $card-width;
+          height: $card-height;
+          position: absolute;
+          text-align: center;
+          line-height: $card-height;
+          font-size: 30px;
+          text-shadow: rgba($black, .25) 0px 2px 1px;
+          border-radius: 8px;
+          @include box-shadow(0px 0px 25px rgba($black, .55));
+          @include backface-visibility(hidden);
+
+          &.front {
+            color: $white;
+            cursor: pointer;
+            background: linear-gradient(to bottom, lighten($purple, 10%), darken($purple, 10%));
+          }
+
+          &.back {
+            background: $white;
+            color: $black;
+            cursor: pointer;
+            @include transform(rotateX(-180deg));
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+
+/* Fade In Animation */
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

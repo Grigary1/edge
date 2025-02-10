@@ -1,0 +1,377 @@
+General Styles
+
+
+body, ul, li, a,button {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Inter", serif;
+
+}
+h1,h2,h3,h4,h5,h6,p{
+    font-family: "Inter", serif;
+}
+
+
+
+:root {
+    --text-size-xs: 0.56rem;
+    --text-size-sm: 0.75rem;
+    --text-size-md: 1rem;
+    --text-size-lg: 1.33rem;
+    --text-size-xl: 1.78rem;
+    --text-size-2xl: 2.37rem;
+    --text-size-3xl: 3.16rem;
+    --text-size-4xl: 4.21rem;
+    --text-size-5xl: 5.61rem;
+    --background-color: hsl(0, 0%, 4%); /* Background color for the entire website, including individual sections */
+    --background-image: url('src/styles/concert-3387324_960_720.jpg'); /* Replace with your image path */
+    --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+    --primary-color: #e91687; /* Color for headings, subheadings and title throughout the website */
+    --secondary-color: #31124e; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --accent-color: #fed104; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --navbar-height: 80px;
+}
+
+  
+
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 8rem !important;
+  background: hsl(332, 100%, 50%); /* Transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  z-index: 1000; /* Ensure navbar is above other elements */
+  padding: 0 20px;
+  border-bottom: 1px solid #969696b7;
+  transform: translateY(0); /* Default position */
+  transition: transform 0.3s ease-in-out; /* Smooth hide/show */
+}
+.navbar.hidden {
+  transform: translateY(-100%); /* Move navbar out of view */
+  position: sticky;
+}
+
+.navbar.visible {
+  transform: translateY(0);
+  position: sticky;  /* Move navbar into view */
+}
+/* Logo Section */
+.logo{
+  position: relative;
+}
+.logo img {
+  height: 40px;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-links button {
+  
+  height: 100%;
+  padding: 0 1.5rem;
+  transition: border 0.2s ease-in-out;
+  border-bottom:2px solid  #ff018800;
+  position: relative;
+
+  
+}
+
+.nav-links a {
+  color: hsl(0, 0%, 100%);
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links button:hover{
+  border-bottom:2px solid  var(--accent-color);
+}
+/* Button */
+.nav-button .btn {
+  background:none;
+  border: 2px solid var(--default-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--default-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: var(--text-size-md);
+  font-weight: 600;
+  text-decoration: none;
+  
+  transition:all 0.4s ease-in-out;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button .btn:hover {
+  background-color: var(--default-color);
+  color:hsl(332, 100%, 50%)
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 15px !important;
+    background-color: #ff0077;
+
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: fit-content;
+
+    background-color: #ff0077;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-in-out;
+
+    z-index: 999;
+    
+  }
+
+  .nav-links.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links button {
+    margin: 0 0;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #fffb0065;
+    width: 100%;
+
+  }
+  .nav-links button:last-child{
+    padding-bottom: 15px;
+    border: none;
+  }
+  .nav-links button:hover{
+    border-bottom:0px solid  #fffb00;
+  }
+
+
+  .hamburger {
+    display: block;
+  }
+  .hb {
+    width: 40px;
+    margin: 0 auto;
+    display: block;
+  }
+  .hb path {
+    transition: d 0.2s ease-in-out;
+  }
+  .nav-button {
+    display: none;
+  }
+}
+
+/* Hero Section Styles */
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - var(--navbar-height)); /* Subtract navbar height */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #31124e;
+  }
+  
+  .background-video-container {
+    position: relative;
+    width: auto;
+    height: calc(100vh - var(--navbar-height)); /* Subtract navbar height */
+    overflow: hidden;
+  }
+  
+  .background-video {
+    object-fit: fill;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    max-height: 100vh; /* Subtract navbar height */
+    width: auto;
+    height: auto;
+    z-index: -1;
+    filter: brightness(0.5); /* Optional: Adjust the brightness for readability */
+  }
+
+  .hero-content {
+    max-width: 800px; /* Restricts content width for better layout */
+    padding: 20px;
+    z-index: 3;
+    font-family: 'Inter', sans-serif;
+  }
+  .hero-logo-container{
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 700px; /* Adjust as needed */
+    width: auto; /* Adjust as needed */
+  }
+  .hero-logo-container{
+    height: fit-content;
+  }
+  .hero-logo {
+    max-width: 100%; /* Ensures the image scales appropriately */
+    max-height: 100%; /* Ensures the image scales appropriately */
+  }
+  
+  .hero-heading {
+    font-size: var(--text-size-2xl); /* Adjust heading size */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtext {
+    font-size: 1.2rem; /* Adjust subtext size */
+    line-height: 1.5;
+  }
+
+/*--------------------------------------------------------------
+  # About Section
+  --------------------------------------------------------------*/
+  .about{
+background-color: var(--background-color);
+    padding: 4em 20px;
+    color: var(--default-color)
+  }
+
+  .about .content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li {
+    padding: 10px 0 0 0;
+    display: flex;
+  }
+  
+  .about .content ul i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+    line-height: 1.2;
+    font-size: 1.25rem;
+  }
+  
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about .pulsating-play-btn {
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+  }
+  
+  /*--------------------------------------------------------------
+  # Why Us Section
+  --------------------------------------------------------------*/
+  .why-us {
+    background-color: var(--background-color);
+    
+  }
+  .why-us .section-title{
+    color: var(--default-color);
+  }
+
+  .why-items{
+    padding: 2rem 0rem;
+  }
+
+  .why-us .card-item {
+    background: color-mix(in srgb, var(--secondary-color), transparent 2%);
+    padding: 50px 30px;
+    transition: all ease-in-out 0.3s;
+    height: 100%;
+    position: relative;
+  }
+  
+  .why-us .card-item span {
+    color: var(--accent-color);
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .why-us .card-item h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .why-us .card-item h4 a {
+    color: var(--default-color);
+    text-decoration: none;
+  }
+  
+  .why-us .card-item p {
+    font-size: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .why-us .card-item:hover {
+    background: var(--accent-color);
+    padding: 30px 30px 70px 30px;
+  }
+  
+  .why-us .card-item:hover span,
+  .why-us .card-item:hover h4 a,
+  .why-us .card-item:hover p {
+    color: var(--contrast-color);
+  }
