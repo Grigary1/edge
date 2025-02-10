@@ -31,7 +31,7 @@ const CardAnimations = () => {
   };
 
   return (
-    <div className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex text-center  ">
+    <div className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex text-center pt-7">
     <img className="h-72 text mx-64" src={images.cartoon} alt="" />
       <section className="max-w-4xl flex mx-48  my-10">
         <ul

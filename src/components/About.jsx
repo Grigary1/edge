@@ -12,7 +12,6 @@ const About = () => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [images.length]);
 
@@ -42,17 +41,16 @@ const About = () => {
                 />
               ))}
             </div>
-
             {/* About Content Section */}
             <div
               className="content text-center lg:text-left"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <h3 className="text-lg sm:text-xl font-bold mb-4 text-[var(--primary-color)]">
+              <h3 className="text-5xl sm:text-5xl font-bold mb-4 text-[var(--primary-color)]">
                 About Edge+
               </h3>
-              <p className="leading-relaxed text-sm sm:text-base">
+              <p className="leading-relaxed text-sm sm:text-base pt-7">
                 Edge+ stands as the flagship event hosted by the ACM student
                 chapter at FISAT, for the past 3 years offering valuable
                 opportunities for{" "}
@@ -91,70 +89,67 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <div className="section-title text-center mb-8 sm:mb-12" data-aos="fade-up">
-            <h2 className="text-xl sm:text-2xl font-bold text-[var(--primary-color)]">
+            <h2 className="text-xl sm:text-5xl font-bold text-[var(--primary-color)]">
               Why EDGE+ 4.0
             </h2>
           </div>
-
           {/* Why Us Items */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 hover:text-white">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Card Item */}
             <div
-              className="card-item bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
+              className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)] hover:text-white">
+              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)] group-hover:text-white group-hover:scale-105 transition-transform">
                 01
               </span>
-              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4">
+              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 <a href="#" className="stretched-link text-white no-underline hover:underline">
                   WORKSHOPS
                 </a>
               </h4>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 Hands-on learning and practical skills in various tech-related
                 subjects, helping participants gain in-depth knowledge and
                 expertise.
               </p>
             </div>
-
             {/* Card Item */}
             <div
-              className="card-item bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
+              className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)]">
+              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)] group-hover:text-white group-hover:scale-105 transition-transform">
                 02
               </span>
-              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4">
+              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 <a href="#" className="stretched-link text-white no-underline hover:underline">
                   CODING COMPS
                 </a>
               </h4>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 Competitive coding event where participants can showcase their
                 programming prowess, solving challenging problems and vying for
                 recognition and prizes.
               </p>
             </div>
-
             {/* Card Item */}
             <div
-              className="card-item bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
+              className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)]">
+              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)] group-hover:text-white group-hover:scale-105 transition-transform">
                 03
               </span>
-              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4">
+              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 <a href="#" className="stretched-link text-white no-underline hover:underline">
                   PRO SHOW
                 </a>
               </h4>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 Exhilarating pro show, featuring the FMC band, dynamic dance
                 performances, and a high-energy DJ show, ensuring a night of
                 entertainment and fun.
