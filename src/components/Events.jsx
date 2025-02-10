@@ -52,9 +52,11 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-auto"
             />
-            <div className="p-2">
-              <h1 className="text-lg font-semibold">Card 1 Title</h1>
-              <p className="text-sm">Card description</p>
+              <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold">
+              <p className="text-lg font-semibold text-white">Register Now</p>
+              <p className="text-white">Prize Pool : </p>
+              <p className="text-white">Date : </p>
+
             </div>
           </li>
 
@@ -65,13 +67,15 @@ const CardAnimations = () => {
             }`}
           >
             <img
-              src={images.coverimg}
+              src={images.hackathon}
               alt="Card 2"
               className="w-full h-auto"
             />
-            <div className="p-2">
-              <h1 className="text-lg font-semibold">Card 2 Title</h1>
-              <p className="text-sm">Card description</p>
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold">
+              <p className="text-lg font-semibold text-white">Register Now</p>
+              <p className="text-white">Prize Pool : </p>
+              <p className="text-white">Date : </p>
+
             </div>
           </li>
 
@@ -85,9 +89,11 @@ const CardAnimations = () => {
               alt="Card 3"
               className="w-full h-auto"
             />
-            <div className="p-2">
-              <h1 className="text-lg font-semibold">Card 3 Title</h1>
-              <p className="text-sm">Card description</p>
+              <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold">
+              <p className="text-lg font-semibold text-white">Register Now</p>
+              <p className="text-white">Prize Pool : </p>
+              <p className="text-white">Date : </p>
+
             </div>
           </li>
         </ul>
