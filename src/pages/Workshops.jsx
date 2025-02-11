@@ -18,7 +18,7 @@ const CardAnimations = () => {
         className="h-[650px] flex justify-center items-center bg-black bg-cover bg-center relative"
         style={{ backgroundImage: `url(${images.background})` }}
       >
-        <div className="absolute inset-0 bg-black/50"></div> {/* Optional Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative z-10 text-white text-center">
           <h1 className="text">WORKSHOPS</h1>
@@ -36,29 +36,29 @@ const CardAnimations = () => {
             >
               <ul className="relative">
 
-                <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
+                {/* <li
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 1"
-                    className="w-full h-auto"
+                    className="w-full h-auto mt-52 mb-14"
                   />
                   <div className="p-2">
                     <h1 className="text-lg font-semibold">1</h1>
                     <p className="text-sm">Stack 1</p>
                   </div>
-                </li>
+                </li> */}
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-blend-saturation rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 2"
-                    className="w-full h-auto"
+                    className="w-full h-auto pt-28"
                   />
                   <div className="p-2">
                     <h1 className="text-lg font-semibold">2</h1>
@@ -90,13 +90,13 @@ const CardAnimations = () => {
               <ul className="relative">
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 1"
-                    className="w-full h-auto"
+                    className="w-full h-auto mt-52 mb-14"
                   />
                   <div className="p-2">
                     <h1 className="text-lg font-semibold">4</h1>
@@ -105,13 +105,13 @@ const CardAnimations = () => {
                 </li>
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 2"
-                    className="w-full h-auto"
+                    className="w-full h-auto pt-28"
                   />
                   <div className="p-2">
                     <h1 className="text-lg font-semibold">5</h1>
@@ -120,11 +120,11 @@ const CardAnimations = () => {
                 </li>
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 3"
                     className="w-full h-auto"
                   />
@@ -143,13 +143,13 @@ const CardAnimations = () => {
               <ul className="relative">
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-30 transform rotate-[-2deg] ${stacksTransition ? "translate-y-[580px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 1"
-                    className="w-full h-auto"
+                    className="w-full h-auto mt-52 mb-96"
                   />
                   <div className="p-2">
                     <h1 className="text-lg font-semibold">7</h1>
@@ -158,13 +158,13 @@ const CardAnimations = () => {
                 </li>
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-20 transform rotate-[-7deg] ${stacksTransition ? "translate-y-[340px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 2"
-                    className="w-full h-auto"
+                    className="w-full h-auto pt-28"
                   />
                   <div className="p-2">
                     <h1 className="text-lg font-semibold">8</h1>
@@ -173,11 +173,11 @@ const CardAnimations = () => {
                 </li>
 
                 <li
-                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
+                  className={`absolute top-0 left-0 w-[250px] h-[250px] bg-transparent rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[5deg] ${stacksTransition ? "translate-y-[100px]" : ""
                     }`}
                 >
                   <img
-                    src={images.coverimg}
+                    src={images.edgerev}
                     alt="Card 3"
                     className="w-full h-auto"
                   />

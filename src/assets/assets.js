@@ -1,5 +1,6 @@
 import menuBar from './menuBar.png'
 import profile_icon from './download.jpeg'
+import edgerev from './edgerev.png'
 import proshow from './proshow.jpeg'
 import cartoon from './cartoon.png'
 import background from './background.jpg'
@@ -14,5 +15,6 @@ export const images={
     cartoon,
     background,
     coverimg,
-    hackathon
+    hackathon,
+    edgerev
 }

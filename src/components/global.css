@@ -1,4 +1,85 @@
 
+#text,
+#shadow {
+
+	margin: 0;
+	font-size: 5em;
+	letter-spacing:px;
+	font-family: Bad Script;
+	color: #fff;
+	flex: content;
+	justify-content: center;
+	padding-bottom: 1em;
+}
+
+#text {
+	color: #333
+}
+
+#shadow {
+	text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+}
+
+#glow {
+	animation: neon1 linear infinite 2s;
+	will-change: opacity;
+}
+
+#blink {
+	animation: blink linear infinite 2s;
+}
+#textLarger,
+#shadowLarger {
+
+	margin: 0;
+	font-size: 5em;
+	letter-spacing:20px;
+	font-family: Bad Script;
+	color: #fff;
+	flex: content;
+	justify-content: center;
+	padding-bottom: 1em;
+	padding-top:0.5em
+}
+
+#shadowLarger {
+	text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+}
+@keyframes neon1 {
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.6;
+	}
+}
+
+
+@keyframes blink {
+	70% {
+		opacity: 1;
+	}
+	79% {
+		opacity: 0;
+	}
+	81% {
+		opacity: 1;
+	}
+	82% {
+		opacity: 0;
+	}
+	83% {
+		opacity: 1;
+	}
+	92% {
+		opacity: 0;
+	}
+	92.5% {
+		opacity: 1;
+	}
+}
+
+
 .testm {
     background-color: hsl(0, 0%, 4%);
 }

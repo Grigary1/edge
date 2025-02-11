@@ -7,6 +7,7 @@ import Workshops from './pages/Workshops'
 import LoadingPage from './pages/LoadingPage'
 import EventDetails from './pages/EventDetails'
 import Footer from './components/Footer'
+import Hackathon from './pages/Hackathon'
 const App = () => {
   return (
     <Router>
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/contact' element={<ContactUs />} />
         <Route path="/workshops" element={<Workshops />} />  
         <Route path='/workshops/:id' element={<EventDetails />} />
+        <Route path='/hackathon' element={<Hackathon />} />
       </Routes>
       <ContactUs/>
       <Footer/>
