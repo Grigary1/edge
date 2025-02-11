@@ -10,6 +10,7 @@ import Events from '../components/Events'
 import TestimonialsPage from '../components/Testimonials'
 import Footer from '../components/Footer'
 import ContactUs from './Contact'
+import Timer from '../components/Timer'
 
 const LandingPage = () => {
   useEffect(() => {
