@@ -64,7 +64,7 @@ const TestimonialsPage = () => {
             <img
               src={currentTestimonial.image}
               alt={currentTestimonial.name}
-              className="rounded-full w-16 sm:w-20 md:w-24 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 object-cover border-2 sm:border-4 border-yellow-500"
+              className="rounded-full w-24 sm:w-20 md:w-36 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 object-cover border-2 sm:border-4 border-yellow-500"
             />
           </div>
         </div>

@@ -2,18 +2,43 @@ import React, { useEffect, useState } from "react";
 import './workshops.scss';
 import { images } from "../assets/assets";
 import { NavLink } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+import { Loader } from "@react-three/drei";
+>>>>>>> 25a263a15d25a602b62b6fe7c4489c627ffce6b0
 const CardAnimations = () => {
   const [stacksTransition, setStacksTransition] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     window.scrollTo(0, 0);
+<<<<<<< HEAD
     setTimeout(() => {
       setStacksTransition(true);
     }, 1000);
   }, []); // Added dependency array to avoid unnecessary re-renders
+=======
+>>>>>>> 25a263a15d25a602b62b6fe7c4489c627ffce6b0
 
-  return (
+    const t1 = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    const t2 = setTimeout(() => {
+      setStacksTransition(true);
+    }, 3000);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+
+  }, []);
+
+
+  return isLoading ? (
+    <div className="flex justify-center items-center h-screen bg-black">
+      <Loader /></div>) : (
     <>
       <div
         className="h-[650px] flex justify-center items-center bg-black bg-cover bg-center relative"
@@ -25,6 +50,7 @@ const CardAnimations = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-[hsl(0,0%,4%)] font-sans pt-10">
         <section className="max-w-6xl mx-auto my-10">
           <ul className="relative flex justify-center gap-10 flex-wrap">
@@ -39,6 +65,15 @@ const CardAnimations = () => {
                 key={workshop.id}
                 className={`relative transition-transform duration-1000 ease-in-out transform ${
                   stacksTransition ? "translate-y-0" : "translate-y-20 opacity-0"
+=======
+      <div className="min-h-screen bg-[hsl(0,0%,4%)] font-sans pt-1">
+
+        <section className="max-w-6xl mx-auto my-10">
+          <ul className="relative h-[700px] cursor-pointer">
+
+            <li
+              className={`absolute top-0 left-0 transition-transform duration-1000 ease-in-out transform ${stacksTransition ? "translate-x-[0px]" : ""
+>>>>>>> 25a263a15d25a602b62b6fe7c4489c627ffce6b0
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }} // Adds a delay for staggered effect
               >
