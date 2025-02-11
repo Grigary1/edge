@@ -114,7 +114,7 @@ const CardAnimations = () => {
         <ul
           className={`relative h-[280px] sm:h-[350px] cursor-pointer ${splitDelayTransition ? "transition-all" : ""
             }`}
-          onClick={() => {navigate('/hackathon') }}
+          onClick={() => {navigate("/workshops"); }} /*CHANGES hackthon to workshop*/
         >
           {/* Card 1 */}
           <li
@@ -131,7 +131,7 @@ const CardAnimations = () => {
               className="w-full h-auto"
             />
             <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
-              <p className="text-sm sm:text-lg font-semibold text-white">Register Now</p>
+              <p className="text-sm sm:text-lg font-semibold text-white">Prevents</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
             </div>
@@ -150,7 +150,7 @@ const CardAnimations = () => {
               className="w-full h-auto"
             />
             <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
-              <p className="text-sm sm:text-lg font-semibold text-white">Register Now</p>
+              <p className="text-sm sm:text-lg font-semibold text-white">Hackathon</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
             </div>
@@ -167,7 +167,7 @@ const CardAnimations = () => {
               className="w-full h-auto"
             />
             <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
-              <p className="text-sm sm:text-lg font-semibold text-white">Register Now</p>
+              <p className="text-sm sm:text-lg font-semibold text-white">Workshop</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
             </div>
