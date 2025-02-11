@@ -35,7 +35,8 @@ const CardAnimations = () => {
   };
   let checkScreen = useScreenSize();  
   return checkScreen?(
-    <div className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex flex-col items-center pt-7 leading-relaxed">
+
+    <div id="events-section" className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex flex-col items-center pt-7 leading-relaxed">
       {/* Image */}
       {/* <img
         className="h-48 mx-auto mb-8"
@@ -103,7 +104,7 @@ const CardAnimations = () => {
     </div>
   ):(
     
-    <div className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex flex-col items-center pt-7">
+    <div id="events-section" className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex flex-col items-center pt-7">
       <p id="shadowLarger" className="h-48 mx-auto mb-8">
         <span className="h-48 mx-auto mb-8" id="glow">REGIS</span><span id="blink">TER</span>
     </p>
@@ -129,7 +130,7 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-auto"
             />
-            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold">
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
               <p className="text-sm sm:text-lg font-semibold text-white">Register Now</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
@@ -148,7 +149,7 @@ const CardAnimations = () => {
               alt="Card 2"
               className="w-full h-auto"
             />
-            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold">
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
               <p className="text-sm sm:text-lg font-semibold text-white">Register Now</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
@@ -165,7 +166,7 @@ const CardAnimations = () => {
               alt="Card 3"
               className="w-full h-auto"
             />
-            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold">
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
               <p className="text-sm sm:text-lg font-semibold text-white">Register Now</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
