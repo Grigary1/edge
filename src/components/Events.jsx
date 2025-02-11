@@ -114,12 +114,12 @@ const CardAnimations = () => {
         <ul
           className={`relative h-[280px] sm:h-[350px] cursor-pointer ${splitDelayTransition ? "transition-all" : ""
             }`}
-          onClick={() => {navigate('/hackathon') }}
+          
         >
           {/* Card 1 */}
           <li
             onClick={() => {
-              navigate("/workshops");
+              navigate("/hackathon");
             }}
             className={`absolute top-0 left-[50px] sm:left-[100px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[-2deg] ${splitDelayTransition ? "translate-x-[-220px] sm:translate-x-[-300px]" : ""
               }`}
@@ -138,7 +138,7 @@ const CardAnimations = () => {
           </li>
 
           {/* Card 2 */}
-          <li
+          <li onClick={()=>navigate('/workshops')}
             className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
                 ? "translate-x-[220px] sm:translate-x-[300px]"
                 : ""

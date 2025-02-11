@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { images } from "../assets/assets";
 import './workshops.scss';
 import './background.css';
 import bgvideo from './../assets/bgvideo.mp4';
 import { useParams } from "react-router-dom";
+import { useScroll } from "@react-three/drei";
+import Loader from "../components/Loader";
 
 const EventDetails = () => {
+    const [isLoading,setIsLoading]=useState(true);
     const data = [
         {
             title: "Hackathon",
@@ -20,19 +23,16 @@ const EventDetails = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        const timeout=setTimeout(()=>{
+            setIsLoading(false)
+        },1000);
+        return ()=>clearTimeout(timeout);
     }, []);
 
-    return (
-        // <><div
-        //         className="h-[650px] flex justify-center items-center bg-black bg-cover bg-center relative"
-        //         style={{ backgroundImage: `url(${images.background})` }}
-        //       >
-        //         <div className="absolute inset-0 bg-black/50"></div>
-        
-        //         <div className="relative z-10 text-white text-center">
-        //           <h1 className="text">HACKATHON</h1>
-        //         </div>
-        //       </div>
+    return isLoading?(
+        <div className="flex justify-center items-center h-screen bg-black">
+        <Loader/></div>
+    ):(
         <>
         <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-6">
             <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden relative">
