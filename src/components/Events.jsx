@@ -60,7 +60,7 @@ const CardAnimations = () => {
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg">
-              <p className="text-sm font-semibold text-white">Register Now </p>
+              <p className="text-sm font-semibold text-white">Preevents </p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
@@ -77,7 +77,7 @@ const CardAnimations = () => {
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg">
-              <p className="text-sm font-semibold text-white">Register Now</p>
+              <p className="text-sm font-semibold text-white">Workshops</p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
@@ -94,7 +94,7 @@ const CardAnimations = () => {
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg">
-              <p className="text-sm font-semibold text-white">Register Now</p>
+              <p className="text-sm font-semibold text-white">Hackathon</p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
@@ -114,11 +114,7 @@ const CardAnimations = () => {
         <ul
           className={`relative h-[280px] sm:h-[350px] cursor-pointer ${splitDelayTransition ? "transition-all" : ""
             }`}
-<<<<<<< HEAD
-          onClick={() => {navigate("/workshops"); }} /*CHANGES hackthon to workshop*/
-=======
           
->>>>>>> 25a263a15d25a602b62b6fe7c4489c627ffce6b0
         >
           {/* Card 1 */}
           <li
