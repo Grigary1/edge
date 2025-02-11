@@ -21,7 +21,22 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
 
     };
+    const handleScroll = (sectionId) => {
+        console.log(`Attempting to scroll to section with id: ${sectionId}`);
 
+        try {
+            const section = document.getElementById(sectionId);
+            console.log("section", section)
+            if (section) {
+                console.log(`Found section: ${sectionId}, scrolling to it...`);
+                section.scrollIntoView({ behavior: "smooth" });
+            } else {
+                console.error(`Error: Section with id "${sectionId}" not found!`);
+            }
+        } catch (error) {
+            console.error("An error occurred during scroll:", error);
+        }
+    };
 
 
     useEffect(() => {
@@ -34,7 +49,7 @@ const Navbar = () => {
 
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
 
-                setIsVisible(false); 
+                setIsVisible(false);
 
             } else {
 
@@ -80,15 +95,15 @@ const Navbar = () => {
 
             <ul className={`nav-links ${isMenuOpen ? "show" : ""}`}>
 
-                <button>
+            <button onClick={() => window.scrollTo(0, 0, { behavior: 'smooth' })}>
 
                     <a href="/">Home</a>
 
                 </button>
 
-                <button>
+                <button onClick={()=>handleScroll("about-edge")}>
 
-                    <a href="#about">About</a>
+                    <a>About</a>
 
                 </button>
 

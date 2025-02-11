@@ -7,6 +7,23 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  const handleScroll = (sectionId) => {
+    console.log(`Attempting to scroll to section with id: ${sectionId}`);
+
+    try {
+      const section = document.getElementById(sectionId);
+      console.log("section",section)
+      if (section) {
+        console.log(`Found section: ${sectionId}, scrolling to it...`);
+        section.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.error(`Error: Section with id "${sectionId}" not found!`);
+      }
+    } catch (error) {
+      console.error("An error occurred during scroll:", error);
+    }
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -42,16 +59,16 @@ const Header = () => {
         <button>
           <a href="/">Home</a>
         </button>
-        <button>
+        <button onClick={()=>handleScroll("about-edge")}>
           <a href="#about">About</a>
         </button>
         <button>
           <a href="#schedule">Schedule</a>
         </button>
-        <button>
+        <button onClick={()=>handleScroll("events-section")}>
           <a href="#events">Events</a>
         </button>
-        <button>
+        <button onClick={()=>handleScroll("contact")}>
           <a href="#contact">Contact</a>
         </button>
       </ul>

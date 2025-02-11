@@ -15,7 +15,7 @@ const About = () => {
   }, [images.length]);
 
   return (
-    <div>
+    <div id="about-edge">
 
       <section
         id="about"
