@@ -9,6 +9,7 @@ import EventDetails from './pages/EventDetails'
 import Footer from './components/Footer'
 import Hackathon from './pages/Hackathon'
 import Loader from './components/Loader'
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 

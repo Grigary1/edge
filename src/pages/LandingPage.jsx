@@ -11,6 +11,7 @@ import TestimonialsPage from '../components/Testimonials'
 import Footer from '../components/Footer'
 import ContactUs from './Contact'
 import Timer from '../components/Timer'
+import SponsorsCarousel from '../components/SponsorsCarousel'
 
 const LandingPage = () => {
   useEffect(() => {
@@ -30,7 +31,7 @@ const LandingPage = () => {
     <Stats/>
     <Events id="events-section"/>
     <TestimonialsPage/>
-
+    <SponsorsCarousel/>
     </>
   )
 }
