@@ -14,7 +14,7 @@ const sponsors = [
 
 const SponsorsCarousel = () => {
   return (
-    <div className="w-full py-6 text-center">
+    <div className="w-fit md:w-full py-6 text-center">
       <h2 id="shadowLarger" className="text-2xl font-bold mb-4">
         Our Previous Sponsors
       </h2>

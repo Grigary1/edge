@@ -43,7 +43,7 @@ const CardAnimations = () => {
                 style={{ transitionDelay: `${index * 200}ms` }} // Adds a delay for staggered effect
               >
                 <NavLink
-                  to={`/workshops/${workshop.id}`}
+                  to={`/prevents/${workshop.id}`}
                   className="block w-[250px] h-[300px] bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all"
                 >
                   <img src={workshop.img} alt={`Card ${workshop.id}`} className="w-full h-[200px] object-cover" />

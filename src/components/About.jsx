@@ -146,7 +146,9 @@ const About = () => {
             </div>
             
           </div>
-          <div className="flex justify-center items-center">
+          
+        </div>
+        <div className="flex justify-center items-center px-4">
             <div
               className=" card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
               data-aos="fade-up"
@@ -167,7 +169,6 @@ const About = () => {
               </p>
             </div>
             </div>
-        </div>
       </section>
     </div>
   );

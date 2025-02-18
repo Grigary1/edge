@@ -7,23 +7,73 @@ import { useParams } from "react-router-dom";
 const EventDetails = () => {
     const data = [
         {
-            "id": 1,
-            "title": "Inter College Cricket Tournament",
+            id: 1,
+            title: "PES tournament",
+            description: [
+               "Hola everyone 👋 Are you ready to experience the thrill of football like never before?",
+               " The ACM STUDENT CHAPTER FISAT as part of  💫 EDGE+4.O 💫 is bringing you an electrifying PES Tournament ( e-Football).",
+               "🔥 Game On! 🔥",
+               "Whether you're a seasoned pro or just love the game, this is your chance to showcase your skills and dominate the virtual field.🏆"
+            ],
+            venue: "Online Event",
+            date: "18/02/2025",
+            fee: "30",
+            prize_pool: "1500",
+            link: "https://forms.gle/nPQnD3uCcd2rKU9Y8",
+            image:images.pes
+        },
+        
+        {
+            id: 2,
+            title: "Online Ludo tournament",
+            description: [
+                "Hola everyone !!! 🎉 We are thrilled to announce our upcoming 𝐋𝐮𝐝𝐨 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧",
+                "As part of  𝔼𝔻𝔾𝔼+ 𝟜.𝟘 organized by  𝐀𝐂𝐌 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 𝐅𝐈𝐒𝐀𝐓",
+                "Are you  a seasoned pro or a casual player?????....🎲"
+            ],
+            venue: "Online Event",
+            date: "24/02/2025",
+            fee: "30",
+            prize_pool: "1000",
+            link: "https://docs.google.com/forms/d/1Ta0BgEt4CE4rFIdJS7StQgMgNEsQbJaRfKA_hEFzYOk/edit",
+            image:images.ludo  
+        },
+        {
+        id: 3,
+            title: "Meme Contest",
+            description: [
+                "Hey Everyone!! 🎊 ",
+                "We are so happy to announce our pre event Meme Competition as a part of EDGE+ 4.0 conducted by ACM STUDENT CHAPTER FISAT ",
+                " 🔥 Calling all meme lords and tech wizards! It’s time to bring out your inner comedian and showcase your best tech, coding, and geeky memes in the ACM Meme Competition!"
+            ],
+            venue: "Online Event",
+            date: "9/2/24",
+            fee: "20",
+            prize_pool: "500",
+            link: "https://forms.gle/QQQaf4umbnEWjd5Y8",
+            image:images.meme
+        },
+        {
+            "id": 4,
+            "title": "Prof Anuranj Memorial trophy",
             "description": [
+                "Hey Guys",
+                "Gear up for an action-packed cricket showdown.Rally your team and compete for glory in the",
                 "An exclusive intra-college cricket tournament organized by the  Department of Computer Science,ACM Student Chapter FISAT and Department  of Physical Education in association with Edge+ 4.0 , this is your chance to showcase your skills on the pitch!"
             ],
-            "venue": "FISAT, Angamaly",
+            "venue": "FISAT ground",
             "date": "17/02/25 - 27/02/25",
-            "fee": "₹2000 per team",
-            "prize_pool": "50k",
-            "link": "https://forms.gle/62i4Zigybiigy95w9"
+            "fee": "2000 per team",
+            "prize_pool": "13 k",
+            "link": "https://forms.gle/62i4Zigybiigy95w9",
+            image:images.crick
         }
     ];
 
 
     let { id } = useParams();
     id = Number(id);
-    const item = data.find((entry) => entry.id === 1);
+    const item = data.find((entry) => entry.id === id);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -84,7 +134,7 @@ const EventDetails = () => {
                 {/* Right Side: Event Image (Hidden on Small Screens) */}
                 <div className="relative flex-1 hidden md:block">
                     <img
-                        src={images.crick} 
+                        src={item.image} 
                         alt="Event"
                         className="w-full h-full object-cover rounded-lg md:rounded-none shadow-xl"
                     />
