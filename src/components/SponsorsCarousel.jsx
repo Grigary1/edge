@@ -14,34 +14,56 @@ const sponsors = [
 
 const SponsorsCarousel = () => {
   return (
-    <div className="w-fit md:w-full py-6 text-center">
-      <h2 id="shadowLarger" className="text-2xl font-bold mb-4">
+    <div className="w-full py-6 text-center">
+      {/* Title */}
+      <h2
+        id="shadowLarger"
+        className="text-2xl sm:text-3xl font-bold mb-4"
+      >
         Our Previous Sponsors
       </h2>
+
+      {/* Swiper Carousel */}
       <Swiper
-        spaceBetween={50}
-        slidesPerView={2}
+        spaceBetween={20} // Adjust spacing dynamically
+        slidesPerView={1} // Default for small screens
+        breakpoints={{
+          640: {
+            slidesPerView: 2, // For tablets
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3, // For medium screens
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4, // For large screens
+            spaceBetween: 50,
+          },
+        }}
         loop={true}
         autoplay={{ delay: 2000 }}
         modules={[Autoplay]}
         className="w-full"
       >
         {sponsors.map((sponsor) => (
-          <SwiperSlide key={sponsor.id} className="flex justify-center">
+          <SwiperSlide key={sponsor.id} className="flex justify-center items-center">
             <img
               src={sponsor.logo}
               alt={sponsor.name}
-              className="h-24 w-auto object-contain shadow-lg"
+              className="h-20 sm:h-24 w-auto object-contain shadow-lg rounded-lg"
             />
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Call-to-Action Link */}
       <div className="mt-6">
         <a
-          href="Edge+_Brochure.pdf" // Update this path as needed
+          href="Edge+_Brochure.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-semibold text-blue-600 hover:underline"
+          className="text-lg sm:text-xl font-semibold text-blue-600 hover:underline transition-colors duration-300"
         >
           Interested in Supporting Our Event?
         </a>

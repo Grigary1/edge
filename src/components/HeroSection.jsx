@@ -57,6 +57,7 @@ const HeroSection = () => {
     };
   }, []);
   let checkScreen = useScreenSize();
+  console.log("Screen",checkScreen);
   return checkScreen?(
     <div
       className="relative md:h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 p-4"
