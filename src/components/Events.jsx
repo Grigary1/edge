@@ -59,7 +59,7 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
-            <div className="p-4 bg-yellow-600 rounded-b-lg">
+            <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Pre-Events </p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
@@ -72,7 +72,7 @@ const CardAnimations = () => {
             className="relative w-64 h-full bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
-              src={images.hack}
+              src={images.codingCoverImg}
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
@@ -93,7 +93,7 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
-            <div className="p-4 bg-yellow-600 rounded-b-lg">
+            <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Hackathon</p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
