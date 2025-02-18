@@ -33,7 +33,7 @@ const CardAnimations = () => {
             </video>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-white text-center">
-          <h1 className="text-8xl font-bold">WORKSHOPS</h1>
+          <h1 className="text-6xl md:text-8xl font-bold">WORKSHOPS</h1>
         </div>
       </div>
 
