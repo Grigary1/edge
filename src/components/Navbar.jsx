@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 
 import Logo from "../assets/logo.png";
+import { images } from "../assets/assets";
 
 
 
@@ -104,7 +105,7 @@ const Navbar = () => {
 
                 <a href="#home">
 
-                    <img src={Logo} alt="Logo" />
+                    <img src={images.edgelogo} alt="Logo" />
 
                 </a>
 

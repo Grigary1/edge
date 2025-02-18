@@ -84,7 +84,7 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               { id: "01", title: "WORKSHOPS", desc: "Hands-on learning and practical skills in various tech-related subjects, helping participants gain in-depth knowledge and expertise." },
-              { id: "02", title: "CODEDGE", desc: "Competitive coding event where participants can showcase their programming prowess, solving challenging problems and vying for recognition and prizes." },
+              { id: "02", title: "HACKATHON", desc: "Competitive coding event where participants can showcase their programming prowess, solving challenging problems and vying for recognition and prizes." },
               { id: "03", title: "PRE-EVENTS", desc: "Exciting lead-up events to engage and prepare participants for the main event with fun and learning experiences." },
             ].map((item, index) => (
               <div
@@ -108,7 +108,7 @@ const About = () => {
             ))}
           </div>
 
-          {/* Hackathon Card */}
+          {/* Hackathon Card
           <div className="flex justify-center items-center px-4">
             <div className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all w-full max-w-xs mx-auto min-h-[250px] sm:min-h-[300px] flex flex-col justify-between"
               data-aos="fade-up"
@@ -126,7 +126,7 @@ const About = () => {
                 Competitive coding event where participants can showcase their programming prowess, solving challenging problems and vying for recognition and prizes.
               </p>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </section>
