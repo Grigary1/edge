@@ -16,7 +16,7 @@ const EventDetails = () => {
                 "🔘 Fine-Tune AI Models: Customize generative AI models for specific use cases.",
                 "🔘 Build AI-Powered Applications: Integrate generative AI into web and mobile applications."
             ],
-            "venue": "Online Event",
+            "venue": "Fisat",
             "date": "TBA",
             "fee": "Free",
             "prize_pool": "500",
@@ -33,7 +33,7 @@ const EventDetails = () => {
                 "Work on a Real-World Cybersecurity Project: Simulate attack scenarios and implement defense mechanisms.",
                 "Gain Hands-On Experience: Use security tools and develop practical skills in cybersecurity."
             ],
-            venue: "Online Event",
+            venue: "Fisat",
             date: "TBA",
             fee: "Free",
             prize_pool: "500",
@@ -49,7 +49,7 @@ const EventDetails = () => {
                 "🔘Work on a Real-World Cybersecurity Project: Simulate attack scenarios and implement defense mechanisms.",
                 "🔘Gain Hands-On Experience: Use security tools and develop practical skills in cybersecurity."
             ],
-            venue: "Online Event",
+            venue: "Fisat",
             date: "TBA",
             fee: "Free",
             prize_pool: "500",
@@ -64,7 +64,7 @@ const EventDetails = () => {
                 "🔘 Handle Data & Files: Read, write, and manipulate data efficiently using Python.",
                 "🔘 Explore Real-World Applications: Learn how Python is used in automation, web development, and data science."
             ],
-            "venue": "Online Event",
+            "venue": "Fisat",
             "date": "TBA",
             "fee": "Free",
             "prize_pool": "500",
@@ -81,7 +81,7 @@ const EventDetails = () => {
                 "🔘 Master Competitive Coding Platforms: Get hands-on experience with Codeforces, LeetCode, and HackerRank.",
                 "🔘 Solve Live Coding Challenges: Work on real-world problems with expert guidance."
             ],
-            "venue": "Online Event",
+            "venue": "Fisat",
             "date": "TBA",
             "fee": "Free",
             "prize_pool": "500",
