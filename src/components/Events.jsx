@@ -55,12 +55,12 @@ const CardAnimations = () => {
             className="relative w-64 h-full bg-white rounded-3xl shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
-              src={images.hackathon}
+              src={images.hack}
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg">
-              <p className="text-sm font-semibold text-white">Preevents </p>
+              <p className="text-sm font-semibold text-white">Pre-Events </p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
@@ -72,7 +72,7 @@ const CardAnimations = () => {
             className="relative w-64 h-full bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
-              src={images.proshow}
+              src={images.hack}
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
@@ -85,11 +85,11 @@ const CardAnimations = () => {
 
           {/* Card 3 */}
           <li
-            onClick={() => navigate("/coding")}
+            onClick={() => navigate("/hackathon")}
             className="relative w-64 h-full bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
-              src={images.proshow}
+              src={images.hack}
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
@@ -126,7 +126,7 @@ const CardAnimations = () => {
             onTransitionEnd={handleCard1TransitionEnd}
           >
             <img
-              src={images.hackathon}
+              src={images.hack}
               alt="Card 1"
               className="w-full h-auto"
             />
@@ -138,14 +138,14 @@ const CardAnimations = () => {
           </li>
 
           {/* Card 2 */}
-          <li onClick={()=>navigate('/workshops')}
+          <li onClick={()=>navigate('/hackathon')}
             className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
                 ? "translate-x-[220px] sm:translate-x-[300px]"
                 : ""
               }`}
           >
             <img
-              src={images.hackathon}
+              src={images.hack}
               alt="Card 2"
               className="w-full h-auto"
             />
@@ -157,12 +157,12 @@ const CardAnimations = () => {
           </li>
 
           {/* Card 3 */}
-          <li
+          <li onClick={()=>navigate('/workshops')}
             className={`absolute top-0 left-[140px] sm:left-[225px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-400 ease-in-out z-8 transform rotate-[5deg] ${splitDelayTransition1 ? "translate-x-[0px]" : ""
               }`}
           >
             <img
-              src={images.coverimg}
+              src={images.codingCoverImg}
               alt="Card 3"
               className="w-full h-auto"
             />

@@ -1,32 +1,101 @@
-import React from 'react';
+import React from "react";
+import "./sidebar.scss"; // Assuming you'll move styles to a CSS file
 
-const Sidebar = () => {
-    return (
-        <div className="h-screen w-64 bg-gray-800 text-white flex flex-col">
-            <div className="px-4 py-2">
-                <h2 className="text-xl font-bold">My Sidebar</h2>
-            </div>
-            <nav className="flex-grow">
-                <ul className="space-y-2">
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-700">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-700">About</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-700">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-700">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <div className="px-4 py-2">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Logout</button>
-            </div>
+const SideBar = () => {
+  return (
+    <div id="nav-bar">
+      {/* Toggle Checkbox */}
+      <input id="nav-toggle" type="checkbox" />
+
+      {/* Header Section */}
+      <div id="nav-header">
+        <a
+          id="nav-title"
+          href="https://codepen.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          C#<i className="fab fa-codepen"></i>DEPEN
+        </a>
+        <label htmlFor="nav-toggle">
+          <span id="nav-toggle-burger"></span>
+        </label>
+        <hr />
+      </div>
+
+      {/* Content Section */}
+      <div id="nav-content">
+        <div className="nav-button">
+          <i className="fas fa-palette"></i>
+          <span>Your Work</span>
         </div>
-    );
+        <div className="nav-button">
+          <i className="fas fa-images"></i>
+          <span>Assets</span>
+        </div>
+        <div className="nav-button">
+          <i className="fas fa-thumbtack"></i>
+          <span>Pinned Items</span>
+        </div>
+        <hr />
+        <div className="nav-button">
+          <i className="fas fa-heart"></i>
+          <span>Following</span>
+        </div>
+        <div className="nav-button">
+          <i className="fas fa-chart-line"></i>
+          <span>Trending</span>
+        </div>
+        <div className="nav-button">
+          <i className="fas fa-fire"></i>
+          <span>Challenges</span>
+        </div>
+        <div className="nav-button">
+          <i className="fas fa-magic"></i>
+          <span>Spark</span>
+        </div>
+        <hr />
+        <div className="nav-button">
+          <i className="fas fa-gem"></i>
+          <span>Codepen Pro</span>
+        </div>
+        <div id="nav-content-highlight"></div>
+      </div>
+
+      {/* Footer Toggle Checkbox */}
+      <input id="nav-footer-toggle" type="checkbox" />
+
+      {/* Footer Section */}
+      <div id="nav-footer">
+        <div id="nav-footer-heading">
+          <div id="nav-footer-avatar">
+            <img
+              src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547"
+              alt="User Avatar"
+            />
+          </div>
+          <div id="nav-footer-titlebox">
+            <a
+              id="nav-footer-title"
+              href="https://codepen.io/uahnbu/pens/public"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              uahnbu
+            </a>
+            <span id="nav-footer-subtitle">Admin</span>
+          </div>
+          <label htmlFor="nav-footer-toggle">
+            <i className="fas fa-caret-up"></i>
+          </label>
+        </div>
+        <div id="nav-footer-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Sidebar;
+export default SideBar;

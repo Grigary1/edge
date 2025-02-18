@@ -1,31 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import image1 from './../assets/download.jpeg';
+import { images } from "../assets/assets";
 import './global.css';
+import { image } from 'framer-motion/client';
 
 const testimonials = [
   {
     id: 1,
     text: "\"Edge+ was a game-changer for me. The coding competition pushed my limits, and the workshops were incredibly insightful. This event helped me level up in the tech world.\"",
     name: "Joel Bobby",
-    image: image1,
+    image: images.joelboby,
   },
   {
     id: 2,
     text: "\"Edge+ was a fantastic learning opportunity. The technical knowledge gained through the workshops was priceless. I'm leaving this event with a renewed passion for technology.\"",
     name: "Aneeka Geo",
-    image: image1,
+    image: images.aneeka,
   },
   {
     id: 3,
     text: "\"Edge+ was an enriching experience. The pro show was entertaining, and the networking opportunities were exceptional. I've made valuable connections and learned a lot.\"",
     name: "Naveen B Jacob",
-    image: image1,
+    image: images.naveen,
   },
   {
     id: 4,
     text: "\"Edge+ was a transformative event for me. The coding competition was intense, and the workshops broadened my horizons. I'm grateful for the skills and connections I gained.\"",
     name: "Joel Nickson",
-    image: image1,
+    image: images.nick,
   },
 ];
 

@@ -100,7 +100,7 @@ const HeroSection = () => {
 
         <p className="text-lg sm:text-sm md:text-xl max-w-xs sm:max-w-md md:max-w-2xl mx-auto mb-6 font-light text-purple-100 animate-typing overflow-hidden border-r-2 border-purple-500">
           Get ready to ignite your passion for technology at ACM STUDENT CHAPTER FISAT's flagship inter-college event on{' '}
-          <span className="font-bold text-purple-300">21th-22th February, 2025</span>.
+          <span className="font-bold text-purple-300">28th february,1st march  2025</span>.
         </p>
 
         <button onClick={() => handleScroll("events-section")} className="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105 group text-xs sm:text-sm md:text-base">
@@ -141,7 +141,7 @@ const HeroSection = () => {
             </h2>
             <p className="text-left text-base sm:text-sm md:text-xl max-w-xs sm:max-w-md md:max-w-2xl mx-auto mb-6 font-light text-purple-100 animate-typing overflow-hidden border-r-2 border-purple-500">
               Get ready to ignite your passion for technology at ACM STUDENT CHAPTER FISAT's flagship inter-college event on{' '}
-              <span className="font-bold text-purple-300">21th-22th February, 2025</span>.
+              <span className="font-bold text-purple-300">28th february,1st march  2025</span>.
             </p>
             <button
               onClick={() => handleScroll("events-section")}

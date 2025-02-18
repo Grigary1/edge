@@ -95,13 +95,13 @@ const Navbar = () => {
 
             <ul className={`nav-links ${isMenuOpen ? "show" : ""}`}>
 
-            <button onClick={() => window.scrollTo(0, 0, { behavior: 'smooth' })}>
+                <button onClick={() => window.scrollTo(0, 0, { behavior: 'smooth' })}>
 
                     <a href="/">Home</a>
 
                 </button>
 
-                <button onClick={()=>handleScroll("about-edge")}>
+                <button onClick={() => handleScroll("about-edge")}>
 
                     <a>About</a>
 
@@ -112,13 +112,9 @@ const Navbar = () => {
                     <a href="#schedule">Schedule</a>
 
                 </button>
-
-                <button>
-
+                <button onClick={() => handleScroll("events-section")}>
                     <a href="#events">Events</a>
-
                 </button>
-
                 <button>
 
                     <a href="#contact">Contact</a>

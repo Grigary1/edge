@@ -93,6 +93,7 @@ const EventDetails = () => {
 
     ];
 
+
     let { id } = useParams();
     id = Number(id);
     const item = data.find((entry) => entry.id === id);

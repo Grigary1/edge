@@ -16,7 +16,7 @@ const EventDetails = () => {
             venue: "Online Event",
             date: "idk",
             fee: "20",
-            prize_pool: "500",
+            prize_pool: "15K",
             link: 'https://forms.gle/QQQaf4umbnEWjd5Y8'
         },
     ];

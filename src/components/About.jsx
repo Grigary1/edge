@@ -118,7 +118,7 @@ const About = () => {
               </span>
               <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 <a href="#" className="stretched-link text-white no-underline hover:underline">
-                  CODING COMPS
+                  CODEDGE
                 </a>
               </h4>
               <p className="text-sm text-gray-400 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
@@ -137,16 +137,36 @@ const About = () => {
               </span>
               <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                 <a href="#" className="stretched-link text-white no-underline hover:underline">
-                  PRO SHOW
+                  PRE-EVENTS
                 </a>
               </h4>
               <p className="text-sm text-gray-400 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
-                Exhilarating pro show, featuring the FMC band, dynamic dance
-                performances, and a high-energy DJ show, ensuring a night of
-                entertainment and fun.
+                WHAT TO ADD HERE
               </p>
             </div>
+            
           </div>
+          <div className="flex justify-center items-center">
+            <div
+              className=" card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-[var(--accent-color)] transition-all"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <span className="block text-2xl sm:text-[28px] font-bold text-[var(--accent-color)] group-hover:text-white group-hover:scale-105 transition-transform">
+                04
+              </span>
+              <h4 className="text-base sm:text-lg font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
+                <a href="#" className="stretched-link text-white no-underline hover:underline">
+                  HACKATHON
+                </a>
+              </h4>
+              <p className="text-sm text-gray-400 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform w-96">
+                Competitive coding event where participants can showcase their
+                programming prowess, solving challenging problems and vying for
+                recognition and prizes.
+              </p>
+            </div>
+            </div>
         </div>
       </section>
     </div>
