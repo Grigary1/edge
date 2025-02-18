@@ -17,6 +17,11 @@ import valo from './valo.jpeg'
 import pes from './pes.jpeg'
 import joelboby from './joelboby.jpeg'
 import naveen from './naveen.jpeg'
+import coverimg1 from './coverimg1.jpeg'
+import coverimg2 from './coverimg2.jpeg'
+import coverimg23 from './coverimg23.jpeg'
+import coverimg4 from './coverimg4.jpeg'
+
 import nick from './nick.jpeg'
 export const icons={
     menuBar,    
@@ -30,6 +35,10 @@ export const images={
     coverimg,
     hackathon,
     edgerev,
+    coverimg1,
+    coverimg2,
+    coverimg23,
+    coverimg4,
     codingCoverImg,
     valo,
     hack,

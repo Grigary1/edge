@@ -90,8 +90,15 @@ const ContactUs = () => {
                 <div className="bg-[#e91687] text-white p-4 rounded-full text-2xl">📞</div>
               </div>
               <h3 className="font-semibold text-lg">Call us:</h3>
-              <p>+91 90742 44983</p>
-              <p>+91 8078 313 514</p>
+              <div className="space-y-1">
+              <p className="font-semibold">Gautham Prasanth</p>
+              <p>+91 90742 44983</p></div>
+              <div>
+              <p className="font-semibold">Hisham Haskar</p>
+              <p>+91 8078 313 514</p></div>
+              <div>
+              <p className="font-semibold">Rhithika Pradeep</p>
+              <p>+91 9400 902 319</p></div>
             </div>
           </div>
         </div>
