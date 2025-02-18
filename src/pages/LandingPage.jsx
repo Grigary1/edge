@@ -31,7 +31,7 @@ const LandingPage = () => {
     <Stats/>
     <Events id="events-section"/>
     <TestimonialsPage/>
-    <SponsorsCarousel/>
+    {/* <SponsorsCarousel/> */}
     </>
   )
 }
