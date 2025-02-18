@@ -55,7 +55,7 @@ const CardAnimations = () => {
             className="relative w-64 h-full bg-white rounded-3xl shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
-              src={images.hack}
+              src={images.crick}
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
@@ -76,10 +76,10 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
-            <div className="p-4 bg-yellow-600 rounded-b-lg">
+            <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Workshops</p>
               <p className="text-xs text-white">Prize Pool: $1000</p>
-              <p className="text-xs text-white">Date: Nov 15, 2023</p>
+              <p className="text-xs text-white">Date: February 28 - March 1</p>
             </div>
           </li>
 
@@ -99,6 +99,7 @@ const CardAnimations = () => {
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
           </li>
+          
         </ul>
       </section>
     </div>
@@ -126,17 +127,17 @@ const CardAnimations = () => {
             onTransitionEnd={handleCard1TransitionEnd}
           >
             <img
-              src={images.hack}
+              src={images.crick   }
               alt="Card 1"
               className="w-full h-auto"
             />
-            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105 text-center">
               <p className="text-sm sm:text-lg font-semibold text-white">Prevents</p>
               <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
               <p className="text-xs sm:text-sm text-white">Date:</p>
             </div>
           </li>
-
+              
           {/* Card 2 */}
           <li onClick={()=>navigate('/hackathon')}
             className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
@@ -149,10 +150,10 @@ const CardAnimations = () => {
               alt="Card 2"
               className="w-full h-auto"
             />
-            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
-              <p className="text-sm sm:text-lg font-semibold text-white">Hackathon</p>
-              <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
-              <p className="text-xs sm:text-sm text-white">Date:</p>
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105 text-center">
+              <p className="text-sm sm:text-lg font-semibold text-white text-center">Hackathon</p>
+              <p className="text-xs sm:text-sm text-white">Prize Pool: 15k</p>
+              <p className="text-xs sm:text-sm text-white">Date : 28th february</p>
             </div>
           </li>
 
@@ -166,14 +167,15 @@ const CardAnimations = () => {
               alt="Card 3"
               className="w-full h-auto"
             />
-            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105">
-              <p className="text-sm sm:text-lg font-semibold text-white">Workshop</p>
-              <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
-              <p className="text-xs sm:text-sm text-white">Date:</p>
+            <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105 text-center">
+              <p className="text-sm sm:text-lg font-semibold text-white">Workshops</p>
+              <p className="text-xs sm:text-sm text-white">Date : February 28th ,  March 1st</p>
             </div>
           </li>
         </ul>
       </section>
+      
+
     </div>
   );
 };

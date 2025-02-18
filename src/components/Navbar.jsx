@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 
 
@@ -14,7 +14,24 @@ const Navbar = () => {
 
     const [lastScrollY, setLastScrollY] = useState(0);
 
+    const navbarRef = useRef(null);
+    const [navbarHeight, setNavbarHeight] = useState(0);
 
+    useEffect(() => {
+        if (navbarRef.current) {
+            setNavbarHeight(navbarRef.current.offsetHeight);
+        }
+
+        // Update height if window resizes
+        const handleResize = () => {
+            if (navbarRef.current) {
+                setNavbarHeight(navbarRef.current.offsetHeight);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const toggleMenu = () => {
 
@@ -187,6 +204,4 @@ const Navbar = () => {
 
 };
 
-
-
-export default Navbar;
+export default Navbar

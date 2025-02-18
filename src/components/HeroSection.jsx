@@ -60,7 +60,7 @@ const HeroSection = () => {
   return checkScreen?(
     <div
       className="relative md:h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 p-4"
-      style={{ height: `${height - 80}px` }}
+      style={{ height: `${height - 90}px` }}
     >
 
       <video

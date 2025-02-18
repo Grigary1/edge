@@ -8,6 +8,7 @@ import LoadingPage from './pages/LoadingPage'
 import EventDetails from './pages/EventDetails'
 import Footer from './components/Footer'
 import Hackathon from './pages/Hackathon'
+import Prevents from './pages/Prevents'
 import Loader from './components/Loader'
 import PreEventDetails from './pages/PreEventDetails'
 
@@ -35,7 +36,8 @@ const App = () => {
         <Route path="/workshops" element={<Workshops />} />
         <Route path='/workshops/:id' element={<EventDetails />} />
         <Route path='/hackathon' element={<Hackathon />} />
-        <Route path='/prevents' element={<PreEventDetails/>}/>
+        <Route path='/prevents' element={<Prevents />} />
+        <Route path='/prevents/:id' element={<PreEventDetails/>}/>
       </Routes>
       <ContactUs />
       <Footer />

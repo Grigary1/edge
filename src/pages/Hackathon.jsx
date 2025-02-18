@@ -12,12 +12,12 @@ const EventDetails = () => {
     const data = [
         {
             title: "Hackathon",
-            description: "Join our exciting Meme Contest and showcase your creativity! Win amazing prizes and have fun.",
-            venue: "Online Event",
-            date: "idk",
-            fee: "20",
-            prize_pool: "15K",
-            link: 'https://forms.gle/QQQaf4umbnEWjd5Y8'
+            description: "🚀 Join us for an electrifying Hackathon where innovation meets creativity! 💡 Collaborate with brilliant minds, solve real-world challenges, and showcase your skills. Whether you're a coder, designer, or problem-solver, this is your chance to build something amazing and win exciting prizes! Don't miss out—register now! 🔥",
+            venue: "FISAT",
+            date: "28th Feb",
+            fee: "1399",
+            prize_pool: "15k",
+            link: 'https://forms.gle/473sBrKtyZGYVBfo8'
         },
     ];
 
@@ -55,10 +55,10 @@ const EventDetails = () => {
                         <p className="text-gray-900 font-semibold"><span className="text-red-600">Prize Pool:</span> {data[0].prize_pool}</p>
                     </div>
                     <button
-                        onClick={() => window.location.href = item.link}
+                        onClick={() => window.location.href = data[0].link}
                         className="bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-full py-3 px-8 mt-8 text-lg sm:text-xl font-bold hover:scale-105 transition-transform duration-300"
                     >
-                        Get My Tickets
+                        Register
                     </button>
                 </div>
 
