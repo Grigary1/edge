@@ -44,15 +44,15 @@ const CardAnimations = () => {
               >
                 <NavLink
                   to={`/prevents/${workshop.id}`}
-                  className="block w-[250px] h-[300px] bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all"
+                  className="block w-[300px] h-[350px] bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all"
                 >
                   <div
-                    className="w-full h-[400px] bg-[url(${workshop.img})] bg-contain bg-center -z-10 flex  justify-center items-end pb-2"
+                    className="w-full h-[350px] bg-[url(${workshop.img})] bg-cover bg-center -z-10 flex  justify-center items-end pb-2"
                     style={{ backgroundImage: `url(${workshop.img})` }}
                   >
                     <div className="p-4 text-center bg-[#F7006A] z-10 rounded-full max-w-48">
                       {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}
-                      <button className="text-sm z-20 rounded-full">Register Now</button>
+                      <button className="text-sm z-20 rounded-full text-white">Register Now</button>
                     </div>
                     {/* Your content here */}
                   </div>
