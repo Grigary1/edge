@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="bg-[hsl(0,0%,4%)] text-white">
+    <div id="contact-us" className="bg-[hsl(0,0%,4%)] text-white">
       {/* Title Section */}
       <div className="text-center py-8 sm:py-12">
         <h2 className="text-3xl sm:text-4xl font-bold text-orange-500">CONTACT US</h2>

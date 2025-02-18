@@ -18,6 +18,8 @@ const Navbar = () => {
     const navbarRef = useRef(null);
     const [navbarHeight, setNavbarHeight] = useState(0);
 
+        
+
     useEffect(() => {
         if (navbarRef.current) {
             setNavbarHeight(navbarRef.current.offsetHeight);
@@ -133,9 +135,9 @@ const Navbar = () => {
                 <button onClick={() => handleScroll("events-section")}>
                     <a href="#events">Events</a>
                 </button>
-                <button>
+                <button onClick={() => handleScroll("contact-us")}>
 
-                    <a href="#contact">Contact</a>
+                    <a>Contact</a>
 
                 </button>
 
@@ -143,7 +145,7 @@ const Navbar = () => {
 
             <div className="nav-button">
 
-                <a href="#register" className="btn">
+                <a onClick={() => handleScroll("events-section")} className="btn">
 
                     REGISTER
 

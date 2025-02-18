@@ -29,11 +29,11 @@ const CardAnimations = () => {
         <section className="max-w-6xl mx-auto my-10">
           <ul className="relative flex justify-center gap-10 flex-wrap">
             {[
-              { id: 1, img: images.proshow, title: "Gen AI" },
+              { id: 1, img: images.edgerev, title: "Gen AI" },
               { id: 2, img: images.edgerev, title: "Image Prompt" },
-              { id: 3, img: images.proshow, title: "Cyber Security" },
+              { id: 3, img: images.edgerev, title: "Cyber Security" },
               { id: 4, img: images.edgerev, title: "Python Project" },
-              { id: 5, img: images.proshow, title: "Competitive Coding" }
+              { id: 5, img: images.edgerev, title: "Competitive Coding" }
             ].map((workshop, index) => (
               <li
                 key={workshop.id}
@@ -47,9 +47,9 @@ const CardAnimations = () => {
                   className="block w-[250px] h-[300px] bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all"
                 >
                   <img src={workshop.img} alt={`Card ${workshop.id}`} className="w-full h-[200px] object-cover" />
-                  <div className="p-4 text-center">
+                  <div className="p-4 text-center bg-[#F7006A]">
                     <h1 className="text-lg font-semibold">{workshop.title}</h1>
-                    <p className="text-sm">Click to explore</p>
+                    <p className="text-sm">Register Now</p>
                   </div>
                 </NavLink>
               </li>
