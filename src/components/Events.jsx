@@ -47,7 +47,7 @@ const CardAnimations = () => {
         <span className="h-48 mx-auto mb-8" id="glow">REGIS</span><span id="blink">TER</span>
     </p>
       {/* Cards Section */}
-      <section className="w-full px-4 overflow-x-auto hide-scrollbar">
+      <section className="w-full x-4 overflow-x-auto ">
         <ul className="flex space-x-4">
           {/* Card 1 */}
           <li

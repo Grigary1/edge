@@ -32,7 +32,7 @@ const testimonials = [
 
 const TestimonialsPage = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const [abc,setabc]=useState(false)
+  const [abc, setabc] = useState(false)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonialIndex((prevIndex) =>
@@ -46,7 +46,7 @@ const TestimonialsPage = () => {
 
   return (
     <div className="testm">
-      <div className="pt-44 container mx-auto p-1 sm:p-4 bg-[hsl(0,0%,4%)] text-white min-h-[10vh] sm:min-h-[40vh] md:h-screen lg:h-fit flex flex-col items-center justify-center overflow-hidden">
+      <div className="md:pt-44 container mx-auto p-1 sm:p-4 bg-[hsl(0,0%,4%)] text-white min-h-[10vh] sm:min-h-[40vh] md:h-screen lg:h-fit flex flex-col items-center justify-center overflow-hidden">
 
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-pink-500 mb-8 text-center pt-36">
           What do our seniors say about EDGE+?
@@ -65,7 +65,7 @@ const TestimonialsPage = () => {
             <img
               src={currentTestimonial.image}
               alt={currentTestimonial.name}
-              className="rounded-full w-24 sm:w-20 md:w-36 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 object-cover border-2 sm:border-4 border-yellow-500"
+              className="rounded-full w-32 h-32 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 object-cover border-2 sm:border-4 border-yellow-500 shadow-md"
             />
           </div>
         </div>

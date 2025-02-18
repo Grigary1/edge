@@ -67,6 +67,21 @@ const EventDetails = () => {
             "prize_pool": "13 k",
             "link": "https://forms.gle/62i4Zigybiigy95w9",
             image:images.crick
+        },
+        {
+            "id": 5,
+            "title": "Valorant",
+            "description": [
+                "Hey Guys",
+                "Gear up for an action-packed cricket showdown.Rally your team and compete for glory in the",
+                "An exclusive intra-college cricket tournament organized by the  Department of Computer Science,ACM Student Chapter FISAT and Department  of Physical Education in association with Edge+ 4.0 , this is your chance to showcase your skills on the pitch!"
+            ],
+            "venue": "FISAT ground",
+            "date": "17/02/25 - 27/02/25",
+            "fee": "2000 per team",
+            "prize_pool": "13 k",
+            "link": "https://forms.gle/62i4Zigybiigy95w9",
+            image:images.crick
         }
     ];
 
@@ -80,7 +95,7 @@ const EventDetails = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-4 sm:px-6 md:px-12 lg:px-20 py-8">
+        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-4  sm:px-6 md:px-12 lg:px-20 py-8">
             <div className="flex flex-col md:flex-row max-w-4xl w-full bg-white shadow-lg rounded-lg sm:rounded-2xl overflow-hidden relative">
 
                 {/* Left Side: Event Info */}

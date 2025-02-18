@@ -46,10 +46,15 @@ const CardAnimations = () => {
                   to={`/prevents/${workshop.id}`}
                   className="block w-[250px] h-[300px] bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all"
                 >
-                  <img src={workshop.img} alt={`Card ${workshop.id}`} className="w-full h-[200px] object-cover" />
-                  <div className="p-4 text-center">
-                    <h1 className="text-lg font-semibold">{workshop.title}</h1>
-                    <p className="text-sm">Click to explore</p>
+                  <div
+                    className="w-full h-[400px] bg-[url(${workshop.img})] bg-contain bg-center -z-10 flex  justify-center items-end pb-2"
+                    style={{ backgroundImage: `url(${workshop.img})` }}
+                  >
+                    <div className="p-4 text-center bg-[#F7006A] z-10 rounded-full max-w-48">
+                      {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}
+                      <button className="text-sm z-20 rounded-full">Register Now</button>
+                    </div>
+                    {/* Your content here */}
                   </div>
                 </NavLink>
               </li>
