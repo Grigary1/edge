@@ -61,7 +61,7 @@ const CardAnimations = () => {
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Pre-Events </p>
-              <p className="text-xs text-white">Prize Pool: $1000</p>
+              <p className="text-xs text-white">Prize Pool: ₹1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
           </li>
@@ -78,7 +78,7 @@ const CardAnimations = () => {
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Workshops</p>
-              <p className="text-xs text-white">Prize Pool: $1000</p>
+              <p className="text-xs text-white">Prize Pool: ₹1000</p>
               <p className="text-xs text-white">Date: February 28 - March 1</p>
             </div>
           </li>
@@ -95,7 +95,7 @@ const CardAnimations = () => {
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Hackathon</p>
-              <p className="text-xs text-white">Prize Pool: $1000</p>
+              <p className="text-xs text-white">Prize Pool: ₹1000</p>
               <p className="text-xs text-white">Date: Nov 15, 2023</p>
             </div>
           </li>
@@ -113,7 +113,7 @@ const CardAnimations = () => {
       {/* Cards Section */}
       <section className="max-w-4xl w-full px-4 sm:px-6 lg:px-8">
         <ul
-          className={`relative h-[280px] sm:h-[350px] cursor-pointer ${splitDelayTransition ? "transition-all" : ""
+          className={`relative h-[280px] sm:h-[350px] cursor-pointer ₹{splitDelayTransition ? "transition-all" : ""
             }`}
           
         >
@@ -140,7 +140,7 @@ const CardAnimations = () => {
               
           {/* Card 2 */}
           <li onClick={()=>navigate('/hackathon')}
-            className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
+             className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
                 ? "translate-x-[220px] sm:translate-x-[300px]"
                 : ""
               }`}

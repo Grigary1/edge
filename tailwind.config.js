@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ["MyCustomFont", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
+        prata: ["Prata", "serif"],
+        openSans: ["Open Sans", "sans-serif"],
+        sofadi: ["Sofadi One", "cursive"],
+      },
       keyframes: {
         typewriter: {
           '0%': { width: '0%' },

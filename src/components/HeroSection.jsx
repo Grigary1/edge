@@ -79,7 +79,7 @@ const HeroSection = () => {
 
       {/* Content Container */}
       <div className="flex flex-col relative z-20 text-center text-white px-4 max-w-4xl w-full">
-        <h1 className="text-4xl sm:text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-text-glow break-words">
+        <h1 className="poppins-bold text-4xl sm:text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-text-glow break-words">
           ACM STUDENT CHAPTER FISAT
         </h1>
         <h2 className="text-lg sm:text-2xl md:text-4xl font-semibold mb-0 text-purple-200 animate-fade-in">
@@ -164,7 +164,6 @@ const HeroSection = () => {
             </div>
 
             {/* Add margin to move the Timer further down */}
-7 */}
           </div>
         </div>
       </div>

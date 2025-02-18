@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Logo from "../assets/logo.png";
 import { images } from "../assets/assets";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -48,6 +49,7 @@ const Navbar = () => {
             const section = document.getElementById(sectionId);
             console.log("section", section)
             if (section) {
+                setIsMenuOpen(false)
                 console.log(`Found section: ${sectionId}, scrolling to it...`);
                 section.scrollIntoView({ behavior: "smooth" });
             } else {
@@ -127,11 +129,11 @@ const Navbar = () => {
 
                 </button>
 
-                <button>
+                <NavLink onClick={()=>setIsMenuOpen(false)} to={'/schedule'}>
 
-                    <a href="#schedule">Schedule</a>
+                    <a>Schedule</a>
 
-                </button>
+                </NavLink>
                 <button onClick={() => handleScroll("events-section")}>
                     <a href="#events">Events</a>
                 </button>

@@ -13,6 +13,7 @@ import Loader from './components/Loader'
 import PreEventDetails from './pages/PreEventDetails'
 
 import SideBar from './components/SideBar'
+import Schedule from './components/Schedule'
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='/contact' element={<ContactUs />} />
         <Route path="/workshops" element={<Workshops />} />
         <Route path='/workshops/:id' element={<EventDetails />} />
+        <Route path='/schedule' element={<Schedule/>}/>
         <Route path='/hackathon' element={<Hackathon />} />
         <Route path='/prevents' element={<Prevents />} />
         <Route path='/prevents/:id' element={<PreEventDetails/>}/>

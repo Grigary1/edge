@@ -1,11 +1,38 @@
+
+
+
+
 import React, { useEffect, useState } from "react";
 import './workshops.scss';
 import { images } from "../assets/assets";
 import { NavLink } from "react-router-dom";
-
+import { motion } from "framer-motion";
+import preventbgvideo from '../assets/preventbgvideo.mp4'
 const CardAnimations = () => {
   const [stacksTransition, setStacksTransition] = useState(false);
+  const text = "PRE-EVENTS";
 
+const TypingEffect = () => {
+  return (
+    <motion.h1
+      className="text-6xl md:text-8xl font-custom text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {text.split("").map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: index * 0.1 }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </motion.h1>
+  );
+};
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => {
@@ -19,10 +46,24 @@ const CardAnimations = () => {
         className="h-[650px] flex justify-center items-center bg-black bg-cover bg-center relative"
         style={{ backgroundImage: `url(${images.background})` }}
       >
+      {/* <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-100 z-0"
+              >
+                <source src={preventbgvideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-white text-center">
-          <h1 className="text-8xl font-bold">PRE-EVENTS</h1>
+          <h1 className="text-8xl font-bold ">{TypingEffect()}</h1>
+          <button onClick={() => window.scrollTo({ top: 300, left: 0, behavior: "smooth" })} className="px-6 py-3 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
+            Register Now
+          </button>
         </div>
+        
       </div>
 
       <div className="min-h-screen bg-[hsl(0,0%,4%)] font-sans pt-10">

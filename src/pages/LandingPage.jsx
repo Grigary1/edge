@@ -14,6 +14,8 @@ import Timer from '../components/Timer'
 import SponsorsCarousel from '../components/SponsorsCarousel'
 
 const LandingPage = () => {
+
+
   useEffect(() => {
   const delay = setTimeout(() => {
     const section = document.getElementById("events-section");
