@@ -8,6 +8,7 @@ import background from './background.jpg'
 import hackathon from './hackathon.jpg'
 import coverimg from './coverimg.png'
 import hack from './hack.jpeg'
+import crick from './crick.jpeg'
 import aneeka from './aneeka.jpeg'
 import joelboby from './joelboby.jpeg'
 import naveen from './naveen.jpeg'
@@ -19,6 +20,7 @@ export const icons={
 export const images={
     proshow,
     cartoon,
+    crick,
     background,
     coverimg,
     hackathon,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Timer = () => {
   // Set the target date to February 22, 2025
-  const targetDate = new Date('February 22, 2025 00:00:00').getTime();
+  const targetDate = new Date('February 28, 2025 00:00:00').getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

@@ -9,7 +9,7 @@ import EventDetails from './pages/EventDetails'
 import Footer from './components/Footer'
 import Hackathon from './pages/Hackathon'
 import Loader from './components/Loader'
-
+import PreEventDetails from './pages/PreEventDetails'
 
 import SideBar from './components/SideBar'
 
@@ -35,6 +35,7 @@ const App = () => {
         <Route path="/workshops" element={<Workshops />} />
         <Route path='/workshops/:id' element={<EventDetails />} />
         <Route path='/hackathon' element={<Hackathon />} />
+        <Route path='/prevents' element={<PreEventDetails/>}/>
       </Routes>
       <ContactUs />
       <Footer />

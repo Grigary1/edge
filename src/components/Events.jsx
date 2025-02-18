@@ -51,7 +51,7 @@ const CardAnimations = () => {
         <ul className="flex space-x-4">
           {/* Card 1 */}
           <li
-            onClick={() => navigate("/hackathon")}
+            onClick={() => navigate("/prevents")}
             className="relative w-64 h-full bg-white rounded-3xl shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
@@ -119,7 +119,7 @@ const CardAnimations = () => {
           {/* Card 1 */}
           <li
             onClick={() => {
-              navigate("/hackathon");
+              navigate("/prevents");
             }}
             className={`absolute top-0 left-[50px] sm:left-[100px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-10 transform rotate-[-2deg] ${splitDelayTransition ? "translate-x-[-220px] sm:translate-x-[-300px]" : ""
               }`}
