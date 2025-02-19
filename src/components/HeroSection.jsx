@@ -52,7 +52,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src={Overlay} type="video/mp4" />
         Your browser does not support the video tag.
