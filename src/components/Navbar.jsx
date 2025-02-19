@@ -4,29 +4,41 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Logo from "../assets/logo.png";
 import { images } from "../assets/assets";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 
 
 const Navbar = () => {
 
+    const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [isVisible, setIsVisible] = useState(true);
+    const location = useLocation();
 
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const navbarRef = useRef(null);
     const [navbarHeight, setNavbarHeight] = useState(0);
 
-        
+    const [scrol, setScrol] = useState(null);
+
+    useEffect(() => {
+        if (location.pathname === '/' && scrol) {
+            const scrollView = document.getElementById(scrol);
+            if (scrollView) {
+                scrollView.scrollIntoView({ behavior: "smooth" })
+            }
+            setScrol(null)
+        }
+    }, [scrol, location.pathname])
 
     useEffect(() => {
         if (navbarRef.current) {
             setNavbarHeight(navbarRef.current.offsetHeight);
         }
 
-        // Update height if window resizes
+
         const handleResize = () => {
             if (navbarRef.current) {
                 setNavbarHeight(navbarRef.current.offsetHeight);
@@ -43,21 +55,9 @@ const Navbar = () => {
 
     };
     const handleScroll = (sectionId) => {
-        console.log(`Attempting to scroll to section with id: ${sectionId}`);
-
-        try {
-            const section = document.getElementById(sectionId);
-            console.log("section", section)
-            if (section) {
-                setIsMenuOpen(false)
-                console.log(`Found section: ${sectionId}, scrolling to it...`);
-                section.scrollIntoView({ behavior: "smooth" });
-            } else {
-                console.error(`Error: Section with id "${sectionId}" not found!`);
-            }
-        } catch (error) {
-            console.error("An error occurred during scroll:", error);
-        }
+        setIsMenuOpen(false);
+        navigate('/')
+        setTimeout(() => setScrol(sectionId), 100);
     };
 
 
@@ -84,8 +84,6 @@ const Navbar = () => {
             setLastScrollY(currentScrollY);
 
         };
-
-
 
         window.addEventListener("scroll", handleScroll);
 
@@ -129,7 +127,7 @@ const Navbar = () => {
 
                 </button>
 
-                <NavLink onClick={()=>setIsMenuOpen(false)} to={'/schedule'}>
+                <NavLink onClick={() => setIsMenuOpen(false)} to={'/schedule'}>
 
                     <a>Schedule</a>
 

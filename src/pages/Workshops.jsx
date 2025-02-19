@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import './workshops.scss';
 import { images } from "../assets/assets";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useNavigation } from "react-router-dom";
 import workshopbackgroundvideo from '../assets/workshopbackgroundvideo.mp4'
 
 const CardAnimations = () => {
   const text = "WORKSHOPS";
 
+  const navigate=useNavigate()
   const TypingEffect = () => {
     return (
       <motion.h1
@@ -59,6 +60,9 @@ const CardAnimations = () => {
           <h1 className="text-8xl font-bold ">{TypingEffect()}</h1>
           <button onClick={() => window.scrollTo({ top: 500, left: 0, behavior: "smooth" })} className="px-6 py-3 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
             Register Now
+          </button>
+          <button onClick={()=>{navigate('/schedule')}} className="px-6 py-3 m-8 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
+            See Our Schedule
           </button>
         </div>
       </div>

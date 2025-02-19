@@ -90,8 +90,8 @@ const Schedule = () => {
                 viewport={{ once: true }}
               >
                 <div className="absolute w-3 h-3 bg-yellow-500 rounded-full left-1"></div>
-                <time className="text-sm font-normal text-gray-400">10:00 AM - 11:00 AM</time>
-                <h3 className="text-lg font-semibold mt-1">Workshop: Introduction to AI</h3>
+                <time className="text-sm font-normal text-gray-400">9:00 AM - 10:00 AM</time>
+                <h3 className="text-lg font-semibold mt-1">Inauguration</h3>
                 <p className="text-gray-400 mt-1">
                   Learn the basics of Artificial Intelligence and its applications in real-world scenarios.
                 </p>

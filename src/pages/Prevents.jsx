@@ -5,12 +5,13 @@
 import React, { useEffect, useState } from "react";
 import './workshops.scss';
 import { images } from "../assets/assets";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useNavigation } from "react-router-dom";
 import { motion } from "framer-motion";
 import preventbgvideo from '../assets/preventbgvideo.mp4'
 const CardAnimations = () => {
   const [stacksTransition, setStacksTransition] = useState(false);
   const text = "PRE-EVENTS";
+  const navigate=useNavigate();
 
 const TypingEffect = () => {
   return (
@@ -61,6 +62,9 @@ const TypingEffect = () => {
           <h1 className="text-8xl font-bold ">{TypingEffect()}</h1>
           <button onClick={() => window.scrollTo({ top: 300, left: 0, behavior: "smooth" })} className="px-6 py-3 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
             Register Now
+          </button> 
+          <button onClick={()=>{navigate('/schedule')}} className="px-6 py-3 m-8 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
+            See Our Schedule
           </button>
         </div>
         
@@ -95,7 +99,7 @@ const TypingEffect = () => {
                       {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}
                       <button className="text-sm z-20 rounded-full text-white">Register Now</button>
                     </div>
-                    {/* Your content here */}
+                
                   </div>
                 </NavLink>
               </li>

@@ -61,8 +61,8 @@ const CardAnimations = () => {
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Pre-Events </p>
-              <p className="text-xs text-white">Prize Pool: ₹1000</p>
-              <p className="text-xs text-white">Date: Nov 15, 2023</p>
+              {/* <p className="text-xs text-white">Prize Pool: ₹1000</p> */}
+              <p className="text-xs text-white">Date: 10th february - 27th february</p>
             </div>
           </li>
 
@@ -78,8 +78,8 @@ const CardAnimations = () => {
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Workshops</p>
-              <p className="text-xs text-white">Prize Pool: ₹1000</p>
-              <p className="text-xs text-white">Date: February 28 - March 1</p>
+              {/* <p className="text-xs text-white">Prize Pool: ₹1000</p> */}
+              <p className="text-xs text-white">Date : February 28th ,  March 1st</p>
             </div>
           </li>
 
@@ -95,8 +95,8 @@ const CardAnimations = () => {
             />
             <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
               <p className="text-sm font-semibold text-white">Hackathon</p>
-              <p className="text-xs text-white">Prize Pool: ₹1000</p>
-              <p className="text-xs text-white">Date: Nov 15, 2023</p>
+              <p className="text-xs text-white">Prize Pool: 15k</p>
+              <p className="text-xs text-white">Date : 28th february</p>
             </div>
           </li>
           
@@ -133,8 +133,8 @@ const CardAnimations = () => {
             />
             <div className="p-2 bg-yellow-600 rounded-3xl font-extrabold hover:scale-y-105 hover:scale-x-105 text-center">
               <p className="text-sm sm:text-lg font-semibold text-white">Prevents</p>
-              <p className="text-xs sm:text-sm text-white">Prize Pool:</p>
-              <p className="text-xs sm:text-sm text-white">Date:</p>
+              {/* <p className="text-xs sm:text-sm text-white"></p> */}
+              <p className="text-xs sm:text-sm text-white">Date: 10th february - 27th february</p>
             </div>
           </li>
               
