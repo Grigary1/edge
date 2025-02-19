@@ -6,6 +6,7 @@ import proshow from './proshow.jpeg'
 import cartoon from './cartoon.png'
 import background from './background.jpg'
 import edgelogo from './edgelogo.png'
+import hackathon111 from './hackathon111.jpeg'
 import hackathon from './hackathon.jpg'
 import coverimg from './coverimg.png'
 import hack from './hack.jpeg'
@@ -31,6 +32,7 @@ export const icons={
 export const images={
     proshow,
     cartoon,
+    hackathon111,
     edgelogo,
     crick,
     background,

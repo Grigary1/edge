@@ -66,7 +66,7 @@ const EventDetails = () => {
                 <div className="relative flex-1">
                     <div className="absolute top-4 right-4 bottom-4 left-4 border-8 border-yellow-500 -z-10"></div>
                     <img
-                        src={images.background} 
+                        src={images.hackathon111} 
                         alt="Concert"
                         className="w-full h-full object-cover shadow-2xl"
                         style={{

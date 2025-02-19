@@ -26,7 +26,7 @@ const CountUp = ({ start, end, duration }) => {
 };
 
 const Stats = () => {
-  const images = [250, 8, 36, 4];
+  const images = [250, 8, 36, 6];
   const labels = ["Participants", "Programs", "Hours Of Fun", "Speakers"];
 
   const [animate, setAnimate] = useState(false);

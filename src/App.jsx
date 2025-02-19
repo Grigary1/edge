@@ -30,7 +30,7 @@ const App = () => {
   ) : (
     // <SideBar/>
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/contact' element={<ContactUs />} />

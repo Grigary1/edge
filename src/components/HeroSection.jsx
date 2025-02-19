@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Logo from '../assets/logo.png';
 import Overlay from '../assets/bgvideo.mp4';
 import Timer from './Timer';
+import Navbar from './Navbar';
 
 const HeroSection = () => {
   const useScreenSize = () => {
@@ -34,33 +35,12 @@ const HeroSection = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const updateHeight = () => {
-  //     setHeight(window.innerHeight);
-  //   };
-  //   window.addEventListener("resize", updateHeight);
-
-  //   // Global mouse move listener for image rotation
-  //   const handleMouseMoveGlobal = (e) => {
-  //     if (!imageRef.current) return;
-  //     const rect = imageRef.current.getBoundingClientRect();
-  //     const centerX = rect.left + rect.width / 2;
-  //     const deltaX = e.clientX - centerX;
-  //     const rotationAngle = Math.max(-maxAngle, Math.min(maxAngle, (deltaX / rect.width) * maxAngle * 4));
-  //     imageRef.current.style.transform = `perspective(1000px) rotateY(${rotationAngle}deg)`;
-  //   };
-
-  //   document.addEventListener("mousemove", handleMouseMoveGlobal);
-  //   return () => {
-  //     window.removeEventListener("resize", updateHeight);
-  //     document.removeEventListener("mousemove", handleMouseMoveGlobal);
-  //   };
-  // }, []);
 
   let checkScreen = useScreenSize();
   console.log("Screen", checkScreen);
 
   return checkScreen ? (
+    <>
     <div
       className="relative md:h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 p-4"
       style={{ height: `${height - 90}px` }}
@@ -79,7 +59,7 @@ const HeroSection = () => {
 
       {/* Content Container */}
       <div className="flex flex-col relative z-20 text-center text-white px-4 max-w-4xl w-full">
-        <h1 className="poppins-bold text-4xl sm:text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-text-glow break-words">
+        <h1 className="font-poppins text-6xl sm:text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-text-glow break-words">
           ACM STUDENT CHAPTER FISAT
         </h1>
         <h2 className="text-lg sm:text-2xl md:text-4xl font-semibold mb-0 text-purple-200 animate-fade-in">
@@ -107,12 +87,15 @@ const HeroSection = () => {
         </button>
       </div>
     </div>
+    </>
   ) : (
+    <>
+    <Navbar/>
     <div>
       {/* Main Container */}
       <div
         className="relative md:h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 p-4"
-        style={{ height: `${height - 80}px` }}
+        style={{ height: `${height - 0}px` }}
       >
         {/* Video Background */}
         <video
@@ -120,7 +103,7 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+          className="absolute inset-0 w-full h-full object-cover  z-0"
         >
           <source src={Overlay} type="video/mp4" />
           Your browser does not support the video tag.
@@ -130,7 +113,7 @@ const HeroSection = () => {
         <div className="relative z-20 flex flex-col md:flex-row justify-between items-center w-full max-w-7xl px-4">
           {/* Div 1: Left Section */}
           <div className="w-full md:w-1/2 pr-0 md:pr-4 flex flex-col items-start mb-8 md:mb-0">
-            <h1 className="text-left text-3xl sm:text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-text-glow break-words">
+            <h1 className="font-poppins text-left text-3xl sm:text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-text-glow break-words">
               ACM STUDENT CHAPTER<br /> FISAT
             </h1>
             <h2 className="text-lg sm:text-2xl md:text-4xl font-semibold mb-6 text-purple-200 animate-fade-in">
@@ -168,6 +151,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
