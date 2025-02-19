@@ -95,7 +95,7 @@ const EventDetails = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-4  sm:px-6 md:px-12 lg:px-20 py-8">
+        <div className="flex justify-center items-center min-h-screen bg-gradient-to-t from-[#eeaecb] via-[#141719] to-[#141719] px-4  sm:px-6 md:px-12 lg:px-20 py-8">
             <div className="flex flex-col md:flex-row max-w-4xl w-full bg-white shadow-lg rounded-lg sm:rounded-2xl overflow-hidden relative">
 
                 {/* Left Side: Event Info */}

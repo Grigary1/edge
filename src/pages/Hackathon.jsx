@@ -33,8 +33,7 @@ const EventDetails = () => {
         <div className="flex justify-center items-center h-screen bg-black">
         <Loader/></div>
     ):(
-        <>
-        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-6">
+        <div className="pt-28 pb-7 md: flex justify-center items-center min-h-screen bg-gradient-to-t from-[#eeaecb] via-[#141719] to-[#141719] px-6">
             <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden relative">
 
                 <div className="flex-1 p-8 text-center md:text-left z-10">
@@ -52,6 +51,7 @@ const EventDetails = () => {
                         <p className="text-gray-900 font-semibold"><span className="text-red-600">Venue:</span> {data[0].venue}</p>
                         <p className="text-gray-900 font-semibold"><span className="text-red-600">Date:</span> {data[0].date}</p>
                         <p className="text-gray-900 font-semibold"><span className="text-red-600">Fee:</span> {data[0].fee}</p>
+                        <p className="text-gray-900 font-semibold"><span className="text-red-600">No of Members : </span>4 <p className="text-zinc-500">(Extra fee for additional member)</p></p>
                         <p className="text-gray-900 font-semibold"><span className="text-red-600">Prize Pool:</span> {data[0].prize_pool}</p>
                     </div>
                     <button
@@ -63,7 +63,7 @@ const EventDetails = () => {
                 </div>
 
 
-                <div className="relative flex-1">
+                <div className="hidden sm:block relative flex-1">
                     <div className="absolute top-4 right-4 bottom-4 left-4 border-8 border-yellow-500 -z-10"></div>
                     <img
                         src={images.hackathon111} 
@@ -79,7 +79,6 @@ const EventDetails = () => {
                 </div>
             </div>
         </div>
-        </>
     );
 };
 

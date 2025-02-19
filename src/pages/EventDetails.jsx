@@ -16,11 +16,12 @@ const EventDetails = () => {
                 "🔘 Fine-Tune AI Models: Customize generative AI models for specific use cases.",
                 "🔘 Build AI-Powered Applications: Integrate generative AI into web and mobile applications."
             ],
-            "venue": "Fisat",
-            "date": "TBA",
-            "fee": "Free",
-            "prize_pool": "500",
-            "link": "https://forms.gle/Pi16FTzyhRYPpAqB7"
+            "venue": "FISAT",
+            "date": "February 28",
+            "fee": "₹549",
+            "fee1":"₹399",
+            "link": "https://forms.gle/Pi16FTzyhRYPpAqB7",
+            "im":images.genaicover
         },
         
         {
@@ -33,10 +34,10 @@ const EventDetails = () => {
                 "Work on a Real-World Cybersecurity Project: Simulate attack scenarios and implement defense mechanisms.",
                 "Gain Hands-On Experience: Use security tools and develop practical skills in cybersecurity."
             ],
-            venue: "Fisat",
-            date: "TBA",
-            fee: "Free",
-            prize_pool: "500",
+            venue: "FISAT",
+            date: "February 28",
+            "fee": "₹549",
+            "fee1":"₹399",
             link: "https://forms.gle/QQQaf4umbnEWjd5Y8"
         },
         {
@@ -49,10 +50,10 @@ const EventDetails = () => {
                 "🔘Work on a Real-World Cybersecurity Project: Simulate attack scenarios and implement defense mechanisms.",
                 "🔘Gain Hands-On Experience: Use security tools and develop practical skills in cybersecurity."
             ],
-            venue: "Fisat",
-            date: "TBA",
-            fee: "Free",
-            prize_pool: "500",
+            venue: "FISAT",
+            date: "February 28 , March 1",
+            "fee": "₹649",
+            "fee1":"₹499",
             link: "https://forms.gle/MGJXFEytso2n6tC27"
         },
         {
@@ -64,10 +65,10 @@ const EventDetails = () => {
                 "🔘 Handle Data & Files: Read, write, and manipulate data efficiently using Python.",
                 "🔘 Explore Real-World Applications: Learn how Python is used in automation, web development, and data science."
             ],
-            "venue": "Fisat",
-            "date": "TBA",
-            "fee": "Free",
-            "prize_pool": "500",
+            "venue": "FISAT",
+            "date": "March 1",
+            "fee": "₹549",
+            "fee1":"₹399",
             "link": "https://forms.gle/UTPZF6jr1UQJcDZZ8"
         },
         
@@ -81,10 +82,11 @@ const EventDetails = () => {
                 "🔘 Master Competitive Coding Platforms: Get hands-on experience with Codeforces, LeetCode, and HackerRank.",
                 "🔘 Solve Live Coding Challenges: Work on real-world problems with expert guidance."
             ],
-            "venue": "Fisat",
-            "date": "TBA",
-            "fee": "Free",
-            "prize_pool": "500",
+            "venue": "FISAT",
+            "date": "March 1",
+            "fee": "₹549",
+            "fee1":"₹399",
+
             "link": "https://forms.gle/1zgKScunMhQFUNAg7"
         }
         
@@ -103,7 +105,7 @@ const EventDetails = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 to-yellow-100 px-4 sm:px-6 md:px-12 lg:px-20 py-8">
+        <div className="pt-28 pb-7 md: flex justify-center items-center min-h-screen bg-gradient-to-t from-[#eeaecb] via-[#141719] to-[#141719] px-4 sm:px-6 md:px-12 lg:px-20 py-8">
             <div className="flex flex-col md:flex-row max-w-4xl w-full bg-white shadow-lg rounded-lg sm:rounded-2xl overflow-hidden relative">
 
                 {/* Left Side: Event Info */}
@@ -131,18 +133,23 @@ const EventDetails = () => {
 
                     {/* Event Details */}
                     <div className="mt-6 space-y-2 text-sm sm:text-base">
-                        <p className="text-gray-900 font-semibold">
+                        <p className="text-gray-900 font-semibold text-left">
                             <span className="text-red-600">Venue:</span> {item.venue}
                         </p>
-                        <p className="text-gray-900 font-semibold">
+                        <p className="text-gray-900 font-semibold text-left">
                             <span className="text-red-600">Date:</span> {item.date}
                         </p>
                         <p className="text-gray-900 font-semibold">
-                            <span className="text-red-600">Fee:</span> {item.fee}
+                            <p className="flex">
+                                <span className="text-red-600">Fee : </span>
+                                 {item.fee1}
+                                 <p className="text-zinc-500">(ACM members)</p>
+                            </p>
+                            <p className="flex"><span className="text-red-600"></span> {item.fee}<p className="text-zinc-500">(Non-ACM members)</p></p>
                         </p>
-                        <p className="text-gray-900 font-semibold">
+                        {/* <p className="text-gray-900 font-semibold">
                             <span className="text-red-600">Prize Pool:</span> {item.prize_pool}
-                        </p>
+                        </p> */}
                     </div>
 
                     {/* Register Button */}
@@ -159,7 +166,7 @@ const EventDetails = () => {
                     <img
                         src={images.background} 
                         alt="Event"
-                        className="w-full h-full object-cover rounded-lg md:rounded-none shadow-xl"
+                        className="w-full h-full object-cover rounded-lg md:rounded-none shadow-xl bg-gradient-to-t from-[#eeaecb] via-[#141719] to-[#141719]"
                     />
                 </div>
             </div>

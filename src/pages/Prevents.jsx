@@ -10,13 +10,14 @@ import { motion } from "framer-motion";
 import preventbgvideo from '../assets/preventbgvideo.mp4'
 const CardAnimations = () => {
   const [stacksTransition, setStacksTransition] = useState(false);
-  const text = "PRE-EVENTS";
+  const text1 = "PRE - ";
+  const text2 = "EVENTS";
   const navigate=useNavigate();
 
-const TypingEffect = () => {
+const TypingEffect = (text) => {
   return (
     <motion.h1
-      className="text-6xl md:text-8xl font-custom text-white"
+      className=" md:w-full text-6xl md:text-8xl font-custom text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -58,13 +59,15 @@ const TypingEffect = () => {
                 Your browser does not support the video tag.
               </video> */}
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 text-white text-center">
-          <h1 className="text-8xl font-bold ">{TypingEffect()}</h1>
+        <div className="mt-48 md: relative z-10 text-white text-center">
+        <div className="space-y-8 md:flex">
+          <h1 className="text-8xl font-bold ">{TypingEffect(text1)}</h1>
+          <h1 className="text-8xl font-bold ">{TypingEffect(text2)}</h1></div>
           <button onClick={() => window.scrollTo({ top: 300, left: 0, behavior: "smooth" })} className="px-6 py-3 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
             Register Now
           </button> 
           <button onClick={()=>{navigate('/schedule')}} className="px-6 py-3 m-8 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
-            See Our Schedule
+            View Our Schedule
           </button>
         </div>
         

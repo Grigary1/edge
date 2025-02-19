@@ -15,6 +15,11 @@ import aneeka from './aneeka.jpeg'
 import cricket from './cricket.jpeg'
 import meme from './meme.jpeg'
 import ludo from './ludo.jpeg'
+import compcoding from './compcoding.jpeg'
+import cybersec from './cybersec.jpeg'
+import genaicover from './genaicover.jpeg'
+import genai from './genai.jpeg'
+import imageprompt from './imageprompt.jpeg'
 import valo from './valo.jpeg'
 import pes from './pes.jpeg'
 import joelboby from './joelboby.jpeg'
@@ -31,6 +36,11 @@ export const icons={
 }
 export const images={
     proshow,
+    compcoding,
+    genaicover,
+    cybersec,
+    genai,
+    imageprompt,
     cartoon,
     hackathon111,
     edgelogo,

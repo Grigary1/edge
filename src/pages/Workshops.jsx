@@ -12,7 +12,7 @@ const CardAnimations = () => {
   const TypingEffect = () => {
     return (
       <motion.h1
-        className="text-6xl md:text-8xl font-custom text-white"
+        className="text-4xl md:text-8xl font-custom text-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -72,11 +72,11 @@ const CardAnimations = () => {
         <section className="max-w-6xl mx-auto my-10">
           <ul className="relative flex justify-center gap-10 flex-wrap">
             {[
-              { id: 1, img: images.edgerev, title: "Gen AI" },
-              { id: 2, img: images.edgerev, title: "Image Prompt" },
-              { id: 3, img: images.edgerev, title: "Cyber Security" },
+              { id: 1, img: images.genai, title: "Gen AI" },
+              { id: 2, img: images.imageprompt, title: "Image Prompt" },
+              { id: 3, img: images.cybersec, title: "Cyber Security" },
               { id: 4, img: images.edgerev, title: "Python Project" },
-              { id: 5, img: images.edgerev, title: "Competitive Coding" }
+              { id: 5, img: images.compcoding, title: "Competitive Coding" }
             ].map((workshop, index) => (
               <li
                 key={workshop.id}
@@ -89,12 +89,12 @@ const CardAnimations = () => {
                   className="block w-[300px] h-[400px] bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all"
                 >
                   <div
-                    className="w-full h-[400px] bg-[url(${workshop.img})] bg-cover bg-center -z-10 flex  justify-center items-end pb-2"
+                    className="w-full h-[400px] bg-[url(${workshop.img})] bg-contain bg-center -z-10 flex  justify-center items-end pb-2"
                     style={{ backgroundImage: `url(${workshop.img})` }}
                   >
                     <div className="p-4 text-center bg-[#F7006A] z-10 rounded-full max-w-48">
                       {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}
-                      <button className="text-sm z-20 rounded-full">Register Now</button>
+                      <button className="text-sm z-20 rounded-full text-white font-semibold">Register Now</button>
                     </div>
                     {/* Your content here */}
                   </div>

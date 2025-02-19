@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6,p{
     --background-color: hsl(0, 0%, 4%);
     --background-image: url('src/styles/concert-3387324_960_720.jpg');
     --default-color: #ffffff;
-    --primary-color: #e91687; 
+    --primary-color: #d6398d; 
     --secondary-color: #31124e;
     --accent-color: #fed104;
     --navbar-height: 80px;
@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6,p{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: #ffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 .navbar.visible {
   transform: translateY(0);
-  position: sticky;  
+  position: visible;  
 }
 
 .logo{
@@ -85,7 +85,6 @@ h1,h2,h3,h4,h5,h6,p{
   display: flex;
   align-items: center;
   position: relative;
-
   justify-content: space-between;
   list-style: none;
   margin: 0;
@@ -150,7 +149,8 @@ h1,h2,h3,h4,h5,h6,p{
   .navbar {
     justify-content: space-between;
     padding: 0 15px !important;
-    background-color: rgba(255, 0, 119, 0.7); /* Semi-transparent pink */
+    background: hwb(332 44% 41% / 0); 
+  backdrop-filter: blur(10px); /* Semi-transparent pink */
     -webkit-backdrop-filter: blur(100px); /* Safari Support */
     backdrop-filter: blur(100px); /* Blur Effect */
 
@@ -164,7 +164,8 @@ h1,h2,h3,h4,h5,h6,p{
     right: 0;
     height: fit-content;
 
-    background-color: rgba(255, 0, 119, 0.7);
+    background: hsl(120, 6%, 10%); 
+  backdrop-filter: blur(50px); 
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10px);
@@ -184,13 +185,16 @@ h1,h2,h3,h4,h5,h6,p{
   }
 
   .nav-links button {
-    margin: 0 0;
+    margin: 0;
     padding: 10px 0;
     border: none;
-    border-bottom: 1px solid #fffb0065;
     width: 100%;
-
   }
+  
+  .nav-links button + button {
+    margin-top: 0.75rem; /* Equivalent to space-y-3 */
+  }
+  
   .nav-links button:last-child{
     padding-bottom: 15px;
     border: none;

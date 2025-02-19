@@ -164,15 +164,15 @@ const About = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={textVarient4}
-                className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:bg-yellow-6 transition-all flex flex-col justify-between min-h-[250px] sm:min-h-[300px] w-full max-w-xs mx-auto"
+                className="card-item group bg-[color-mix(in srgb, var(--secondary-color), transparent 2%)] p-4 sm:p-6 rounded-lg hover:backdrop-blur-md transition-all flex flex-col justify-between min-h-[250px] sm:min-h-[300px] w-full max-w-xs mx-auto"
               >
                 <span className="block text-2xl sm:text-[32px] font-bold text-[var(--accent-color)] group-hover:text-white group-hover:scale-105 transition-transform">
                   {item.id}
                 </span>
                 <h4 className="text-base sm:text-2xl font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
-                  <a className="stretched-link text-white no-underline hover:underline">
+                  <p className="stretched-link text-white no-underline hover">
                     {item.title}
-                  </a>
+                  </p>
                 </h4>
                 <p className="text-sm text-gray-400 md:text-base group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                   {item.desc}
