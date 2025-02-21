@@ -10,6 +10,22 @@
         },{
             "source":"/hackathon",
             "destination":"/index.html"
+        },
+        {
+            "source":"/workshops/1",
+            "destination":"/index.html"
+        },
+        {
+            "source":"/workshops/5",
+            "destination":"/index.html"
+        },
+        {
+            "source":"/workshops/3",
+            "destination":"/index.html"
+        },
+        {
+            "source":"/workshops/2",
+            "destination":"/index.html"
         }
     ]
 }
