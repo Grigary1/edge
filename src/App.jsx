@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import LandingPage from "./pages/LandingPage";
 import ContactUs from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 import Workshops from "./pages/Workshops";
 import EventDetails from "./pages/EventDetails";
 import Footer from "./components/Footer";
@@ -33,6 +34,7 @@ const AppContent = () => {
 
       {!location.pathname.startsWith("/workshops") && !location.pathname.startsWith("/prevents") && <ContactUs />}
       {!location.pathname.startsWith("/workshops") && !location.pathname.startsWith("/prevents") && <Footer />}
+      <Analytics />
     </>
   );
 };
