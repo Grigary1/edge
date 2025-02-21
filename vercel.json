@@ -1,0 +1,8 @@
+{
+    "rewrites":[
+        {
+        "source":"/workshops",
+        "destination":"/index.html"
+        }
+    ]
+}
