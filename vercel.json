@@ -24,8 +24,16 @@
             "destination":"/index.html"
         },
         {
+            "source":"/workshops/4",
+            "destination":"/index.html"
+        },
+        {
             "source":"/workshops/2",
             "destination":"/index.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }

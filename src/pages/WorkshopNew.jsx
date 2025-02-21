@@ -56,12 +56,12 @@ const data = [
     id: 4,
     title: "Mern Stack",
     description: [
-      "Learn Python fundamentals, libraries, and data handling techniques for various applications. "
+      "Learn MERN stack fundamentals, building dynamic web applications with MongoDB, Express.js, React, and Node.js."
     ],
     venue: "FISAT",
     date: "February 28,March 1",
-    fee: "₹549",
-    fee1: "₹399",
+    fee: "₹649",
+    fee1: "₹499",
     link: "https://forms.gle/UTPZF6jr1UQJcDZZ8",
     im: images.mernstack
   },

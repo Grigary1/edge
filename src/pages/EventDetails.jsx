@@ -19,11 +19,11 @@ const EventDetails = () => {
             "venue": "FISAT",
             "date": "February 28",
             "fee": "₹549",
-            "fee1":"₹399",
+            "fee1": "₹399",
             "link": "https://forms.gle/Pi16FTzyhRYPpAqB7",
-            "im":images.genaicover
+            "im": images.genaicover
         },
-        
+
         {
             id: 2,
             title: "Image Prompt",
@@ -37,11 +37,11 @@ const EventDetails = () => {
             venue: "FISAT",
             date: "February 28",
             "fee": "₹549",
-            "fee1":"₹399",
+            "fee1": "₹399",
             link: "https://forms.gle/QQQaf4umbnEWjd5Y8"
         },
         {
-        id: 3,
+            id: 3,
             title: "Cyber Security",
             description: [
                 "🔘Understand Cybersecurity Fundamentals: Learn about threats, vulnerabilities, and attack vectors.",
@@ -53,25 +53,26 @@ const EventDetails = () => {
             venue: "FISAT",
             date: "February 28 , March 1",
             "fee": "₹649",
-            "fee1":"₹499",
+            "fee1": "₹499",
             link: "https://forms.gle/MGJXFEytso2n6tC27"
         },
         {
             "id": 4,
-            "title": "Python Project",
+            "title": "Mern Stack",
             "description": [
-                "🔘 Understand Python Fundamentals: Learn variables, data types, operators, loops, and functions.",
-                "🔘 Work with Python Libraries: Explore popular libraries that enhance Python’s capabilities.",
-                "🔘 Handle Data & Files: Read, write, and manipulate data efficiently using Python.",
-                "🔘 Explore Real-World Applications: Learn how Python is used in automation, web development, and data science."
+                "🔘 Set Up a Backend: Build a robust server using Node.js and Express.",
+                "🔘 Manage Data with MongoDB: Store and retrieve data efficiently in a NoSQL database.",
+                "🔘 Create a Responsive Frontend: Design dynamic user interfaces with React.",
+                "🔘 Fetch & Handle Data: Integrate APIs for seamless data communication.",
+                "🔘 Deploy Your Project: Launch your full-stack application for global access."
             ],
             "venue": "FISAT",
             "date": "March 1",
-            "fee": "₹549",
-            "fee1":"₹399",
+            "fee": "₹649",
+            "fee1": "₹499",
             "link": "https://forms.gle/UTPZF6jr1UQJcDZZ8"
         },
-        
+
         {
             "id": 5,
             "title": "Competitive Coding",
@@ -85,12 +86,12 @@ const EventDetails = () => {
             "venue": "FISAT",
             "date": "March 1",
             "fee": "₹549",
-            "fee1":"₹399",
+            "fee1": "₹399",
 
             "link": "https://forms.gle/1zgKScunMhQFUNAg7"
         }
-        
-      
+
+
 
 
     ];
@@ -142,8 +143,8 @@ const EventDetails = () => {
                         <p className="text-gray-900 font-semibold">
                             <p className="flex">
                                 <span className="text-red-600">Fee : </span>
-                                 {item.fee1}
-                                 <p className="text-zinc-500">(ACM members)</p>
+                                {item.fee1}
+                                <p className="text-zinc-500">(ACM members)</p>
                             </p>
                             <p className="flex"><span className="text-red-600"></span> {item.fee}<p className="text-zinc-500">(Non-ACM members)</p></p>
                         </p>
@@ -164,7 +165,7 @@ const EventDetails = () => {
                 {/* Right Side: Event Image (Hidden on Small Screens) */}
                 <div className="relative flex-1 hidden md:block">
                     <img
-                        src={images.background} 
+                        src={images.background}
                         alt="Event"
                         className="w-full h-full object-cover rounded-lg md:rounded-none shadow-xl bg-gradient-to-t from-[#eeaecb] via-[#141719] to-[#141719]"
                     />
