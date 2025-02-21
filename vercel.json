@@ -3,6 +3,13 @@
         {
         "source":"/workshops",
         "destination":"/index.html"
+        },
+        {
+            "source":"/prevents",
+            "destination":"/index.html"
+        },{
+            "source":"/hackathon",
+            "destination":"/index.html"
         }
     ]
 }

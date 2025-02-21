@@ -107,7 +107,7 @@ const Navbar = () => {
 
                 <a href="#home">
 
-                    <img src={images.edgelogo} alt="Logo" />
+                    <img onClick={()=>navigate('/')} src={images.edgelogo} alt="Logo" />
 
                 </a>
 
