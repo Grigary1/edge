@@ -75,7 +75,7 @@ const CardAnimations = () => {
               { id: 1, img: images.genai, title: "Gen AI" },
               { id: 2, img: images.imageprompt, title: "Image Prompt" },
               { id: 3, img: images.cybersec, title: "Cyber Security" },
-              { id: 4, img: images.edgerev, title: "Python Project" },
+              { id: 4, img: images.mernstack, title: "Python Project" },
               { id: 5, img: images.compcoding, title: "Competitive Coding" }
             ].map((workshop, index) => (
               <li

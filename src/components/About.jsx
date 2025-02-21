@@ -36,13 +36,13 @@ const About = () => {
 
   };
   const textVarient4 = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: (delayTime) => ({
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 1.5,
-        ease: "easeOut",
+        duration: 2.5,
+        ease: "easeInOut",
         delay: delayTime, 
       },
     }),
@@ -145,7 +145,7 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               variants={textVarient3}
-              className="text-xl sm:text-5xl font-bold text-[var(--primary-color)]">
+              className="text-4xl sm:text-5xl font-bold text-[var(--primary-color)]">
               Why EDGE+ 4.0
             </motion.h2>
           </div>
@@ -169,12 +169,12 @@ const About = () => {
                 <span className="block text-2xl sm:text-[32px] font-bold text-[var(--accent-color)] group-hover:text-white group-hover:scale-105 transition-transform">
                   {item.id}
                 </span>
-                <h4 className="text-base sm:text-2xl font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
+                <h4 className="text-xl sm:text-2xl font-semibold my-2 sm:my-4 group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                   <p className="stretched-link text-white no-underline hover">
                     {item.title}
                   </p>
                 </h4>
-                <p className="text-sm text-gray-400 md:text-base group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
+                <p className="text-base text-gray-400 md:text-base group-hover:text-white group-hover:font-bold group-hover:scale-105 transition-transform">
                   {item.desc}
                 </p>
               </motion.div>

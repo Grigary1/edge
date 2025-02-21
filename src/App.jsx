@@ -14,7 +14,7 @@ import Schedule from "./components/Schedule";
 import WorkshopNew from "./pages/WorkshopNew";
 
 const AppContent = () => {
-  const location = useLocation(); // ✅ Now inside Router context
+  const location = useLocation();
 
   return (
     <>
@@ -30,7 +30,7 @@ const AppContent = () => {
         <Route path="/prevents/:id" element={<PreEventDetails />} />
       </Routes>
 
-      {/* Dynamically show/hide ContactUs & Footer */}
+
       {!location.pathname.startsWith("/workshops") && !location.pathname.startsWith("/prevents") && <ContactUs />}
       {!location.pathname.startsWith("/workshops") && !location.pathname.startsWith("/prevents") && <Footer />}
     </>
@@ -53,7 +53,7 @@ const App = () => {
     </div>
   ) : (
     <Router>
-      <AppContent /> {/* ✅ Moved useLocation inside this component */}
+      <AppContent />
     </Router>
   );
 };

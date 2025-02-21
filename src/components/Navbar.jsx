@@ -105,7 +105,7 @@ const Navbar = () => {
 
             <div className="logo">
 
-                <a href="#home">
+                <a>
 
                     <img onClick={()=>navigate('/')} src={images.edgelogo} alt="Logo" />
 
@@ -113,7 +113,7 @@ const Navbar = () => {
 
             </div>
 
-            <ul className={`nav-links ${isMenuOpen ? "show" : ""}`}>
+            <ul className={`nav-links ${isMenuOpen ? "show" : ""} space-y-4`}>
 
                 <button onClick={() => window.scrollTo(0, 0, { behavior: 'smooth' })}>
 

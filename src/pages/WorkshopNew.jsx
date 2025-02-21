@@ -54,16 +54,16 @@ const data = [
   },
   {
     id: 4,
-    title: "Python Project",
+    title: "Mern Stack",
     description: [
       "Learn Python fundamentals, libraries, and data handling techniques for various applications. "
     ],
     venue: "FISAT",
-    date: "March 1",
+    date: "February 28,March 1",
     fee: "₹549",
     fee1: "₹399",
     link: "https://forms.gle/UTPZF6jr1UQJcDZZ8",
-    im: images.edgerev
+    im: images.mernstack
   },
   {
     id: 5,
@@ -173,13 +173,13 @@ export default function WorkshopNew() {
           </a>
 
           {/* Schedule Button */}
-          <a
+          {/* <a
             onClick={() => navigate('/schedule')}
             className="flex items-center justify-center space-x-2 border-2 border-yellow-500 text-yellow-500 font-bold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 hover:text-white transition duration-300 cursor-pointer"
           >
             <Calendar className="w-5 h-5" />
             <span>View Our Schedule</span>
-          </a>
+          </a> */}
         </p>
 
       </div>
@@ -200,14 +200,20 @@ export default function WorkshopNew() {
                 <img
                   src={workshop.im || images.defaultCover}
                   alt={workshop.title}
-                  className="w-full h-56 object-cover rounded "
+                  className="w-full object-cover rounded "
                 />
                 <p className="text-center mt-2 text-sm font-">{workshop.title}</p>
               </div>
             ))}
           </div>
         </div>
+        <p className="text-right align-middle text-3xl pr-4 text-yellow-300">
+          <span className="inline-block animate-blink delay-[1s]">›</span>
+          <span className="inline-block animate-blink delay-[3s]">›</span>
+          <span className="inline-block animate-blink delay-[5s]">›</span>
+        </p>
       </div>
+
     </div>
   ) : (
     <>
@@ -217,7 +223,7 @@ export default function WorkshopNew() {
 
       >
         <div className="relative z-10 text-white text-center">
-          <h1 className="text-8xl font-bold ">{TypingEffect("WORKSHO{S")}</h1>
+          <h1 className="text-8xl font-bold ">{TypingEffect("WORKSHOPS")}</h1>
           <button onClick={() => window.scrollTo({ top: 500, left: 0, behavior: "smooth" })} className="px-6 py-3 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200 transition mt-5">
             Register Now
           </button>
@@ -235,14 +241,14 @@ export default function WorkshopNew() {
               { id: 1, img: images.genai, title: "Gen AI" },
               { id: 2, img: images.imageprompt, title: "Image Prompt" },
               { id: 3, img: images.cybersec, title: "Cyber Security" },
-              { id: 4, img: images.edgerev, title: "Python Project" },
+              { id: 4, img: images.mernstack, title: "Python Project" },
               { id: 5, img: images.compcoding, title: "Competitive Coding" }
             ].map((workshop, index) => (
               <li
                 key={workshop.id}
                 className={`relative transition-transform duration-1000 ease-in-out transform ${stacksTransition ? "translate-y-0" : "translate-y-20 opacity-0"
                   }`}
-                style={{ transitionDelay: `${index * 200}ms` }} // Adds a delay for staggered effect
+                style={{ transitionDelay: `${index * 200}ms` }} 
               >
                 <NavLink
                   to={`/workshops/${workshop.id}`}

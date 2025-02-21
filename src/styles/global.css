@@ -13,8 +13,8 @@ h1,h2,h3,h4,h5,h6,p{
     font-family: "Inter", serif;
 }
 @font-face {
-  font-family: "MyCustomFont";  /* Name you want to use */
-  src: url("/fonts/myfont.ttf") format("truetype"); /* Path to .ttf */
+  font-family: "MyCustomFont";
+  src: url("/fonts/myfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -77,7 +77,8 @@ h1,h2,h3,h4,h5,h6,p{
   position: relative;
 }
 .logo img {
-  height: 250px;
+  height:fit-content;
+  width: 250px;
 }
 
 
@@ -147,15 +148,20 @@ h1,h2,h3,h4,h5,h6,p{
 
 @media (max-width: 768px) {
   .navbar {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 15px !important;
-    background: hwb(332 44% 41% / 0); 
-  backdrop-filter: blur(10px); /* Semi-transparent pink */
-    -webkit-backdrop-filter: blur(100px); /* Safari Support */
-    backdrop-filter: blur(100px); /* Blur Effect */
-
+    width: 100vw; /* Ensures full width */
+    background: rgba(255, 20, 147, 0.1); /* Semi-transparent pink */
+    backdrop-filter: blur(10px); /* Blur Effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    position: fixed; /* Ensures it stays in place */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other elements */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
   }
-
   .nav-links {
     flex-direction: column;
     position: absolute;
@@ -181,6 +187,7 @@ h1,h2,h3,h4,h5,h6,p{
   .nav-links.show {
     visibility: visible;
     opacity: 1;
+    
     transform: translateY(0);
   }
 
@@ -192,7 +199,7 @@ h1,h2,h3,h4,h5,h6,p{
   }
   
   .nav-links button + button {
-    margin-top: 0.75rem; /* Equivalent to space-y-3 */
+    margin-top: 0.75rem;
   }
   
   .nav-links button:last-child{

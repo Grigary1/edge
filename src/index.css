@@ -5,6 +5,35 @@
 @import "@fontsource/poppins"; /* Defaults to 400 weight */
 @import "@fontsource/poppins/300.css"; /* Light */
 @import "@fontsource/poppins/700.css"; /* Bold */
+/* width */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #b1d42f;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #49d610;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.animate-blink {
+  animation: fade 1s infinite ease-in-out;
+}
 
 .poppins-thin {
     font-family: "Poppins", sans-serif;

@@ -33,8 +33,8 @@ const CardAnimations = () => {
   const handleCard1TransitionEnd = () => {
     setSplitDelayTransition1(true);
   };
-  let checkScreen = useScreenSize();  
-  return checkScreen?(
+  let checkScreen = useScreenSize();
+  return checkScreen ? (
 
     <div id="events-section" className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex flex-col items-center pt-7 leading-relaxed">
       {/* Image */}
@@ -45,25 +45,27 @@ const CardAnimations = () => {
       /> */}
       <p id="shadow" className="h-48 mx-auto mb-8">
         <span className="h-48 mx-auto mb-8" id="glow">REGIS</span><span id="blink">TER</span>
-    </p>
+      </p>
       {/* Cards Section */}
       <section className="w-full x-4 overflow-x-auto ">
         <ul className="flex space-x-4">
           {/* Card 1 */}
           <li
             onClick={() => navigate("/prevents")}
-            className="relative w-64 h-full bg-white rounded-3xl shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
+            className="relative w-64 h-full bg-black rounded-3xl shadow-md flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
               src={images.crick}
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
-            <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
-              <p className="text-sm font-semibold text-white">Pre-Events </p>
-              {/* <p className="text-xs text-white">Prize Pool: ₹1000</p> */}
-              <p className="text-xs text-white">Date: 10th february - 27th february</p>
+            <div className="p-4 bg-black rounded-b-lg text-center">
+              <button className="glass-button relative px-6 py-3 text-pink-400 border border-pink-600 font-bold text-lg border-2 border-white rounded-lg overflow-hidden group">
+                Register
+                <div className="absolute inset-0 border-2 border-black rounded-lg animate-border group-hover:bg-opacity-20"></div>
+              </button>
             </div>
+
           </li>
 
           {/* Card 2 */}
@@ -76,10 +78,11 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
-            <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
-              <p className="text-sm font-semibold text-white">Workshops</p>
-              {/* <p className="text-xs text-white">Prize Pool: ₹1000</p> */}
-              <p className="text-xs text-white">Date : February 28th ,  March 1st</p>
+            <div className="p-4 bg-black rounded-b-lg text-center">
+              <button className="glass-button relative px-6 py-3 text-pink-400 border border-pink-600 font-bold text-lg border-2 border-white rounded-lg overflow-hidden group">
+                Register
+                <div className="absolute inset-0 border-2 border-black rounded-lg animate-border group-hover:bg-opacity-20"></div>
+              </button>
             </div>
           </li>
 
@@ -93,29 +96,30 @@ const CardAnimations = () => {
               alt="Card 1"
               className="w-full h-full object-cover rounded-t-lg -z-10"
             />
-            <div className="p-4 bg-yellow-600 rounded-b-lg text-center">
-              <p className="text-sm font-semibold text-white">Hackathon</p>
-              <p className="text-xs text-white">Prize Pool: 15k</p>
-              <p className="text-xs text-white">Date : 28th february</p>
+            <div className="p-4 bg-black rounded-b-lg text-center">
+              <button className="glass-button relative px-6 py-3 text-pink-400 border border-pink-600 font-bold text-lg border-2 border-white rounded-lg overflow-hidden group">
+                Register
+                <div className="absolute inset-0 border-2 border-black rounded-lg animate-border group-hover:bg-opacity-20"></div>
+              </button>
             </div>
           </li>
-          
+
         </ul>
       </section>
     </div>
-  ):(
-    
+  ) : (
+
     <div id="events-section" className="min-h-fit bg-[hsl(0,0%,4%)] font-sans flex flex-col items-center pt-7">
       <p id="shadowLarger" className="h-48 mx-auto mb-8">
         <span className="h-48 mx-auto mb-8" id="glow">REGIS</span><span id="blink">TER</span>
-    </p>
+      </p>
 
       {/* Cards Section */}
       <section className="max-w-4xl w-full px-4 sm:px-6 lg:px-8">
         <ul
           className={`relative h-[280px] sm:h-[350px] cursor-pointer ₹{splitDelayTransition ? "transition-all" : ""
             }`}
-          
+
         >
           {/* Card 1 */}
           <li
@@ -127,7 +131,7 @@ const CardAnimations = () => {
             onTransitionEnd={handleCard1TransitionEnd}
           >
             <img
-              src={images.crick   }
+              src={images.crick}
               alt="Card 1"
               className="w-full h-auto"
             />
@@ -137,12 +141,12 @@ const CardAnimations = () => {
               <p className="text-xs sm:text-sm text-white">Date: 10th february - 27th february</p>
             </div>
           </li>
-              
+
           {/* Card 2 */}
-          <li onClick={()=>navigate('/hackathon')}
-             className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
-                ? "translate-x-[220px] sm:translate-x-[300px]"
-                : ""
+          <li onClick={() => navigate('/hackathon')}
+            className={`absolute top-0 left-[230px] sm:left-[350px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-1000 ease-in-out z-9 transform rotate-[-7deg] ${splitDelayTransition && splitDelayTransition1
+              ? "translate-x-[220px] sm:translate-x-[300px]"
+              : ""
               }`}
           >
             <img
@@ -158,7 +162,7 @@ const CardAnimations = () => {
           </li>
 
           {/* Card 3 */}
-          <li onClick={()=>navigate('/workshops')}
+          <li onClick={() => navigate('/workshops')}
             className={`absolute top-0 left-[140px] sm:left-[225px] w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] bg-white rounded-lg shadow-md transition-transform duration-400 ease-in-out z-8 transform rotate-[5deg] ${splitDelayTransition1 ? "translate-x-[0px]" : ""
               }`}
           >
@@ -174,7 +178,7 @@ const CardAnimations = () => {
           </li>
         </ul>
       </section>
-      
+
 
     </div>
   );

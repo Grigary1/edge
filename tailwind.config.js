@@ -24,10 +24,35 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.7' },
         },
+        moveBorder: {
+          '0%': {
+            transform: 'translateX(-100%)',
+          },
+          '50%': {
+            transform: 'translateX(100%)',
+          },
+          '100%': {
+            transform: 'translateX(-100%)',
+          },
+        },
       },
+      'neon-pink': {
+          '0%': { boxShadow: '0 0 10px 2px #ff1493, 0 0 20px 5px #ff1493', transform: 'translate(0, 0)' },
+          '25%': { transform: 'translate(100%, 0)' },
+          '50%': { transform: 'translate(100%, 100%)' },
+          '75%': { transform: 'translate(0, 100%)' },
+          '100%': { transform: 'translate(0, 0)' },
+        },
       animation: {
         typewriter: 'typewriter 3s steps(30) forwards',
         glow: 'glow 1.5s infinite alternate',
+        border: 'moveBorder 2s infinite linear',
+        'neon-pink': 'neon-pink 3s linear infinite',
+      },
+      animationDelay: {
+        '1s': '1s',
+        '2s': '2s',
+        '3s': '3s',
       },
     },
   },

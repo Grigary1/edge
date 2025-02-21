@@ -4,6 +4,7 @@ import edgerev from './edgerev.png'
 import codingCoverImg from './coding.jpeg'
 import proshow from './proshow.jpeg'
 import cartoon from './cartoon.png'
+import mernstack from './mernstack.jpeg'
 import background from './background.jpg'
 import edgelogo from './edgelogo.png'
 import hackathon111 from './hackathon111.jpeg'
@@ -43,6 +44,7 @@ export const images={
     imageprompt,
     cartoon,
     hackathon111,
+    mernstack,
     edgelogo,
     crick,
     background,
