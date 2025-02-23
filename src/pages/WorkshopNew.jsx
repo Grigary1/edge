@@ -35,7 +35,7 @@ const data = [
     date: "February 28",
     fee: "₹549",
     fee1: "₹399",
-    link: "https://forms.gle/QQQaf4umbnEWjd5Y8",
+    link: "https://forms.gle/xqJA3mvScycVFpz88",
     im: images.imageprompt
   },
   {
