@@ -287,9 +287,9 @@ export default function WorkshopNew() {
                     className="w-full h-[350px] bg-[url(${workshop.img})] bg-cover bg-center -z-10 flex  justify-center items-end pb-2"
                     style={{ backgroundImage: `url(${workshop.img})` }}
                   >
-                    <div className="p-4 text-center bg-[#F7006A] z-10 rounded-full max-w-48">
-                      {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}{closedEvents.includes(selectedWorkshop.id)?
-                      <button className="text-sm z-20 rounded-full text-white">Registration Closed</button>:
+                    <div className={`p-4 text-center ${closedEvents.includes(workshop.id)?'bg-red-600' :'bg-[#F7006A]'   } z-10 rounded-full max-w-48`}>
+                      {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}{closedEvents.includes(workshop.id)?
+                      <button className="text-sm z-20 rounded-full text-white ">Registration Closed</button>:
                       <button className="text-sm z-20 rounded-full text-white">Register Now</button>}
                     </div>
 
