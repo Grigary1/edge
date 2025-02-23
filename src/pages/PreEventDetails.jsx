@@ -5,7 +5,7 @@ import './background.css';
 import { useParams } from "react-router-dom";
 
 const EventDetails = () => {
-    const closedEvents=[4]
+    const closedEvents=[4,1]
     const data = [
         {
             id: 1,

@@ -12,19 +12,7 @@ import { motion } from "framer-motion";
 import ContactUs from "./Contact";
 import Footer from "../components/Footer";
 const data = [
-  {
-    id: 1,
-    title: "PES\nTournament",
-    description: [
-      "Join the electrifying PES Tournament as part of EDGE+4.0! . Showcase your skills and dominate the virtual field.🏆"
-    ],
-    venue: "Online Event",
-    date: "18/02/2025",
-    fee: "30",
-    prize_pool: "1500",
-    link: "https://forms.gle/nPQnD3uCcd2rKU9Y8",
-    image: images.pes
-  },
+
 
   {
     id: 2,
@@ -38,6 +26,19 @@ const data = [
     prize_pool: "1000",
     link: "https://docs.google.com/forms/d/1Ta0BgEt4CE4rFIdJS7StQgMgNEsQbJaRfKA_hEFzYOk/edit",
     image: images.ludo
+  },
+  {
+    id: 1,
+    title: "PES\nTournament",
+    description: [
+      "Join the electrifying PES Tournament as part of EDGE+4.0! . Showcase your skills and dominate the virtual field.🏆"
+    ],
+    venue: "Online Event",
+    date: "18/02/2025",
+    fee: "30",
+    prize_pool: "1500",
+    link: "https://forms.gle/nPQnD3uCcd2rKU9Y8",
+    image: images.pes
   },
   {
     id: 3,
@@ -82,7 +83,7 @@ const data = [
 
 
 export default function WorkshopNew() {
-  const closedEvents=[4]
+  const closedEvents=[4,1]
   const text1 = "PRE - ";
   const text2 = "EVENTS";
   const navigate = useNavigate()
@@ -169,7 +170,7 @@ export default function WorkshopNew() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center space-x-2 mt-3 bg-red-500 text-white font-bold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300"
+            className="flex items-center justify-center space-x-2 mt-3 bg-red-500 text-white font-bold px-5 py-2 rounded-lg shadow-md  transition duration-300"
           >
             <UserPlus className="w-5 h-5" />
             <span>Registration Closed</span>
@@ -287,8 +288,9 @@ export default function WorkshopNew() {
                     style={{ backgroundImage: `url(${workshop.img})` }}
                   >
                     <div className="p-4 text-center bg-[#F7006A] z-10 rounded-full max-w-48">
-                      {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}
-                      <button className="text-sm z-20 rounded-full text-white">Register Now</button>
+                      {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}{closedEvents.includes(selectedWorkshop.id)?
+                      <button className="text-sm z-20 rounded-full text-white">Registration Closed</button>:
+                      <button className="text-sm z-20 rounded-full text-white">Register Now</button>}
                     </div>
 
                   </div>
