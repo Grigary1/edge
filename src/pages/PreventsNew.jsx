@@ -76,12 +76,13 @@ const data = [
     fee: "30",
     prize_pool: "13 k",
     link: "https://forms.gle/jcosw1ZXem4XTHjz8",
-    image: images.edgerev
+    image: images.valo
   }
 ];
 
 
 export default function WorkshopNew() {
+  const closedEvents=[4]
   const text1 = "PRE - ";
   const text2 = "EVENTS";
   const navigate = useNavigate()
@@ -164,6 +165,15 @@ export default function WorkshopNew() {
 
         <p className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 sm:space-x-4">
           {/* Register Button */}
+          {closedEvents.includes(selectedWorkshop.id)?
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center space-x-2 mt-3 bg-red-500 text-white font-bold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300"
+          >
+            <UserPlus className="w-5 h-5" />
+            <span>Registration Closed</span>
+          </a>:
           <a
             href={selectedWorkshop.link}
             target="_blank"
@@ -172,7 +182,7 @@ export default function WorkshopNew() {
           >
             <UserPlus className="w-5 h-5" />
             <span>Register Now</span>
-          </a>
+          </a>}
 
           {/* Schedule Button */}
           {/* <a

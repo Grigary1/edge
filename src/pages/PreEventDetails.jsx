@@ -5,6 +5,7 @@ import './background.css';
 import { useParams } from "react-router-dom";
 
 const EventDetails = () => {
+    const closedEvents=[4]
     const data = [
         {
             id: 1,
@@ -65,7 +66,7 @@ const EventDetails = () => {
             "date": "17/02/25 - 27/02/25",
             "fee": "2000 per team",
             "prize_pool": "13 k",
-            "link": "https://forms.gle/62i4Zigybiigy95w9",
+            "link": "",
             image:images.crick
         },
         {
@@ -81,7 +82,7 @@ const EventDetails = () => {
             "fee": "2000 per team",
             "prize_pool": "13 k",
             "link": "https://forms.gle/jcosw1ZXem4XTHjz8",
-            image:images.crick
+            image:images.valo
         }
     ];
 
@@ -138,12 +139,18 @@ const EventDetails = () => {
                     </div>
 
                     {/* Register Button */}
+                    {closedEvents.includes(item.id)?
+                    <button
+                        className="bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-full py-3 px-6 sm:px-8 mt-6 sm:mt-8 text-sm sm:text-lg font-bold hover:scale-105 transition-transform duration-300"
+                    >
+                        Registration Closed
+                    </button>:
                     <button
                         onClick={() => window.location.href = item.link}
                         className="bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-full py-3 px-6 sm:px-8 mt-6 sm:mt-8 text-sm sm:text-lg font-bold hover:scale-105 transition-transform duration-300"
                     >
-                        Register Now
-                    </button>
+                        Register Now   
+                    </button>}
                 </div>
 
                 {/* Right Side: Event Image (Hidden on Small Screens) */}
