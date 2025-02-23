@@ -80,7 +80,7 @@ const EventDetails = () => {
             "date": "17/02/25 - 27/02/25",
             "fee": "2000 per team",
             "prize_pool": "13 k",
-            "link": "https://forms.gle/62i4Zigybiigy95w9",
+            "link": "https://forms.gle/jcosw1ZXem4XTHjz8",
             image:images.crick
         }
     ];

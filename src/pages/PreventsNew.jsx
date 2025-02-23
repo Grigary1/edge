@@ -75,7 +75,7 @@ const data = [
     date: "17/02/25 - 27/02/25",
     fee: "30",
     prize_pool: "13 k",
-    link: "https://forms.gle/62i4Zigybiigy95w9",
+    link: "https://forms.gle/jcosw1ZXem4XTHjz8",
     image: images.edgerev
   }
 ];
