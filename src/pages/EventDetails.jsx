@@ -143,10 +143,10 @@ const EventDetails = () => {
                         <p className="text-gray-900 font-semibold">
                             <p className="flex">
                                 <span className="text-red-600">Fee : </span>
-                                {item.fee1}
+                                ₹{Number(item.fee1.replace(/[^\d]/g,""))-100}
                                 <p className="text-zinc-500">(ACM members)</p>
                             </p>
-                            <p className="flex"><span className="text-red-600"></span> {item.fee}<p className="text-zinc-500">(Non-ACM members)</p></p>
+                            <p className="flex"><span className="text-red-600"></span>₹{Number(item.fee.replace(/[^\d]/g,""))-50}<p className="text-zinc-500">(Non-ACM members)</p></p>
                         </p>
                         {/* <p className="text-gray-900 font-semibold">
                             <span className="text-red-600">Prize Pool:</span> {item.prize_pool}

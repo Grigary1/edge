@@ -145,9 +145,9 @@ export default function WorkshopNew() {
 
           {/* Fee Section */}
           <p className="text-lg mt-4 text-white">
-            💰 <span className="text-yellow-400 font-semibold">{selectedWorkshop.fee1}</span> <span className="text-sm">(For ACM members)</span>
+            💰 <span className="text-yellow-400 font-semibold">₹{Number(selectedWorkshop.fee1.replace(/[^\d]/g, ""))-100}</span> <span className="text-sm">(For ACM members)</span>
             <br />
-            💰 <span className="text-yellow-500 font-semibold">{selectedWorkshop.fee}</span> <span className="text-sm">(For Non-ACM members)</span>
+            💰 <span className="text-yellow-500 font-semibold">₹{Number(selectedWorkshop.fee.replace(/[^\d]/g, ""))-50}</span> <span className="text-sm">(For Non-ACM members)</span>
           </p>
 
           {/* Workshop Description */}
@@ -262,7 +262,6 @@ export default function WorkshopNew() {
                       {/* <h1 className="text-lg font-semibold">{workshop.title}</h1> */}
                       <button className="text-sm z-20 rounded-full text-white font-semibold">Register Now</button>
                     </div>
-                    {/* Your content here */}
                   </div>
 
                   {/* <img src={workshop.img} alt={`Card ${workshop.id}`} className="w-full h-[400px] object-cover -z-10" /> */}
