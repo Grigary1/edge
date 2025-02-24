@@ -13,17 +13,17 @@ import ContactUs from "./Contact";
 import Footer from "../components/Footer";
 const data = [
   {
-    id: 1,
-    title: "Gen AI",
+    id: 5,
+    title: "Competitive Coding",
     description: [
-      "Learn about generative models, their applications, and work with AI-powered text, image, and video generation. ",
+      "Master algorithms, data structures, and problem-solving techniques for competitive coding.",
     ],
     venue: "FISAT",
-    date: "February 28",
+    date: "March 1",
     fee: "₹549",
     fee1: "₹399",
-    link: "https://forms.gle/Pi16FTzyhRYPpAqB7",
-    im: images.genai
+    link: "https://forms.gle/1zgKScunMhQFUNAg7",
+    im: images.compcoding
   },
   {
     id: 2,
@@ -37,6 +37,19 @@ const data = [
     fee1: "₹399",
     link: "https://forms.gle/xqJA3mvScycVFpz88",
     im: images.imageprompt
+  },
+  {
+    id: 1,
+    title: "Gen AI",
+    description: [
+      "Learn about generative models, their applications, and work with AI-powered text, image, and video generation. ",
+    ],
+    venue: "FISAT",
+    date: "February 28",
+    fee: "₹549",
+    fee1: "₹399",
+    link: "https://forms.gle/Pi16FTzyhRYPpAqB7",
+    im: images.genai
   },
   {
     id: 3,
@@ -65,22 +78,11 @@ const data = [
     link: "https://forms.gle/UTPZF6jr1UQJcDZZ8",
     im: images.mernstack
   },
-  {
-    id: 5,
-    title: "Competitive Coding",
-    description: [
-      "Master algorithms, data structures, and problem-solving techniques for competitive coding.",
-    ],
-    venue: "FISAT",
-    date: "March 1",
-    fee: "₹549",
-    fee1: "₹399",
-    link: "https://forms.gle/1zgKScunMhQFUNAg7",
-    im: images.compcoding
-  }
-];
 
+];
+const   closedEvents=[1];
 export default function WorkshopNew() {
+
 
   const navigate = useNavigate()
   const TypingEffect = (text) => {
@@ -162,6 +164,15 @@ export default function WorkshopNew() {
 
         <p className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 sm:space-x-4">
           {/* Register Button */}
+          {closedEvents.includes(selectedWorkshop.id)?
+            <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center space-x-2 mt-3 bg-red-500 text-white font-bold px-5 py-2 rounded-lg shadow-md  transition duration-300"
+          >
+            <UserPlus className="w-5 h-5" />
+            <span>Registration Closed</span>
+          </a>:
           <a
             href={selectedWorkshop.link}
             target="_blank"
@@ -170,7 +181,7 @@ export default function WorkshopNew() {
           >
             <UserPlus className="w-5 h-5" />
             <span>Register Now</span>
-          </a>
+          </a>}
 
           {/* Schedule Button */}
           {/* <a

@@ -104,7 +104,7 @@ const EventDetails = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
+    const closedEvents=[1];
     return (
         <div className="pt-28 pb-7 md: flex justify-center items-center min-h-screen bg-gradient-to-t from-[#eeaecb] via-[#141719] to-[#141719] px-4 sm:px-6 md:px-12 lg:px-20 py-8">
             <div className="flex flex-col md:flex-row max-w-4xl w-full bg-white shadow-lg rounded-lg sm:rounded-2xl overflow-hidden relative">
@@ -154,12 +154,17 @@ const EventDetails = () => {
                     </div>
 
                     {/* Register Button */}
-                    <button
+                    {closedEvents.includes(item.id)?<button
+                        className="bg-red-600 text-white rounded-full py-3 px-6 sm:px-8 mt-6 sm:mt-8 text-sm sm:text-lg font-bold transition-transform duration-300"
+                    >
+                        Registration Closed
+                    </button>:<button
                         onClick={() => window.location.href = item.link}
                         className="bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-full py-3 px-6 sm:px-8 mt-6 sm:mt-8 text-sm sm:text-lg font-bold hover:scale-105 transition-transform duration-300"
                     >
                         Register Now
                     </button>
+                    }
                 </div>
 
                 {/* Right Side: Event Image (Hidden on Small Screens) */}
