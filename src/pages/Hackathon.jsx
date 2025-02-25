@@ -56,9 +56,9 @@ const EventDetails = () => {
                     </div>
                     <button
                     
-                        className="bg-red-600 text-white rounded-full py-3 px-8 mt-8 text-lg sm:text-xl font-bold  transition-transform duration-300"
+                        className="bg-gradient-to-br from-amber-600 to-pink-600 text-white rounded-full py-3 px-8 mt-8 text-lg sm:text-xl font-bold  transition-transform duration-300"
                     >
-                        Registration Closed
+                        Register Now
                     </button>
                 </div>
 
