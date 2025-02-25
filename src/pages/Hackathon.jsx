@@ -55,8 +55,8 @@ const EventDetails = () => {
                         <p className="text-gray-900 font-semibold"><span className="text-red-600">Prize Pool:</span> {data[0].prize_pool}</p>
                     </div>
                     <button
-                    
-                        className="bg-gradient-to-br from-amber-600 to-pink-600 text-white rounded-full py-3 px-8 mt-8 text-lg sm:text-xl font-bold  transition-transform duration-300"
+                        onClick={()=>window.location.href=data[0].link}
+                        className="bg-gradient-to-br from-amber-600 to-pink-600 text-white rounded-full py-3 px-8 mt-8 text-lg sm:text-xl hover:scale-105 font-bold  transition-transform duration-300"
                     >
                         Register Now
                     </button>
